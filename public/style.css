@@ -1,83 +1,15 @@
-* {
-    box-sizing: border-box;
-    }
-  
-  body {
-    background: #747a83;
-    padding-bottom: 56px; }
-  
-  #main {
-    padding-left: 0; }
+body {
+  background-color: #9fadb8;
+}
 
-  sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 0 !important;
-    background: #303030;
-    height: calc(100vh - 56px);
-    width: inherit;
-    overflow-y: auto;
-    border-right: 2px solid #555; }
-    sidebar::-webkit-scrollbar{
-      width: 10px;
-      background-color: #222; }
-    sidebar::-webkit-scrollbar-thumb{
-      background-color: black;
-      -webkit-border-radius: 1ex; }
-    sidebar .logo {
-      width: 100%;
-      padding: 15px; }
-    sidebar section > * {
-      padding: 0 15px; }
-    sidebar .menu-item {
-      padding-left: 0px; }
-      sidebar .menu-item a {
-        transition: border-left, 0.2s;
-        padding-left: 15px;
-        color: #c8c8c8; }
-        sidebar .menu-item a:hover {
-          color: white; }
-      sidebar .menu-item a.active, sidebar .menu-item a:hover {
-        border-left: 3px solid #00bc8c; }
+sidebar {
+  color: #2e373d;
+  font-size: 1em;
+  font-family: 'Snell Roundhand', cursive;
+  transform: translateX(5em);
+}
 
-campus{
-  background: #747a83; }  
-  campus #image {
-    padding: 20px;
-    height: 300px; }
-  campus #campuses {
-    display: flex; 
-    padding: 20px; }
-
-header {
-  background: #303030;
-  border-bottom-right-radius: 25px;
-  border-top-right-radius: 25px; }    
-  header nav {
-    display: flex; }
-  header h1 {
-    color: white;
-    padding-left: 25px;
-  }
-  header #link {
-    padding: 26px; }
-
-students{
-  background: #767b81; }
-  students #id{
-    position: absolute;
-    padding-left: 5px; }
-  students #name{
-    position: absolute;
-    padding-left: 100px; }
-  students #campus{
-    padding-left: 250px; }
-  students #button{
-    padding-left: 400px; }
-
-form {
-  background: #767b81; }
-  form h3 {
-    font-size: 24px;
-  }
+#menu {
+  padding: 5px;
+  margin-bottom: 25px;
+}

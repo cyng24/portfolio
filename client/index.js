@@ -1,7 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+'use strict'
 
-ReactDOM.render(
-  <div>Hello, world!</div>,
-  document.getElementById('app')
-);
+import React from 'react'
+import {render} from 'react-dom'
+import { Provider } from 'react-redux'
+
+import store from './store'
+import Main from './components/Main'
+
+render (
+  <Provider store={store}>
+    <Main />
+  </Provider>,
+  document.getElementById('main')
+)
