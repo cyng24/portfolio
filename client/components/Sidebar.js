@@ -7,13 +7,10 @@ export default class Sidebar extends Component {
     return (
       <sidebar>
         <h1>Christina Ng</h1>
-        <h1>________</h1>
-        <li>
+        <h2>________</h2>
           <Link id="link" to="/about">about</Link>
-        </li>
-        <li>
-        <Link id="link" to="/projects">projects</Link>
-        </li>
+          <Link id="link" to="/projects">projects</Link>
+          <Link id="link" to="/resume">resume</Link>
       </sidebar>
     );
   }

@@ -1,15 +1,63 @@
 body {
-  background-color: #9fadb8;
+  background-color: #c7cfd6;
 }
 
 sidebar {
   color: #2e373d;
-  font-size: 1em;
-  font-family: 'Snell Roundhand', cursive;
-  transform: translateX(5em);
+  z-index: 2;
+  height: 100%;
+  width: 15em;
+  transform: translateX(2em);
+  display: inline-flex;
+  flex-direction: column;
+}
+  sidebar h1 {
+    font-size: 2em;
+    font-family: 'Snell Roundhand', cursive;
+    margin: 0em;
+  }
+  sidebar h2 {
+    font-size: 1em;
+    margin: 0em;
+  }
+  sidebar #link {
+    color: #2e373d;
+    margin-top: 2em;
+  }
+
+page {
+  width: 50%;
+  transform: translate(6em, 8em);
+  display: inline-flex;
+  flex-direction: column;
 }
 
-#menu {
-  padding: 5px;
-  margin-bottom: 25px;
+home {
+  text-align: center;
+  position: relative;
 }
+  home h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+section {
+  width: 60%;
+  height: 60%;
+}
+  #carousel {
+    display: inline-flex;
+    flex-direction: column;
+  }
+    #carousel .carousel-image {
+      display: block;
+      width: 20%;
+      height: 20%;
+      margin: 0.25em;
+      opacity: 1;
+      transition: opacity 1.5s;
+    }
