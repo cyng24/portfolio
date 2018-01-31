@@ -7,6 +7,7 @@ export default class Resume extends Component {
     return (
       <resume>
         <h1>Resume</h1>
+        <img className="resume-image" src="images/resume.png" />
       </resume>
     );
   }

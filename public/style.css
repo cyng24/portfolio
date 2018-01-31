@@ -1,5 +1,5 @@
 body {
-  background-color: #c7cfd6;
+  background-color: #d7dde2;
 }
 
 sidebar {
@@ -22,7 +22,8 @@ sidebar {
   }
   sidebar #link {
     color: #2e373d;
-    margin-top: 2em;
+    font-family: Courier New, Courier, monospace;
+    text-decoration: none;
   }
 
 page {
@@ -30,6 +31,7 @@ page {
   transform: translate(6em, 8em);
   display: inline-flex;
   flex-direction: column;
+  font-family: Courier New, Courier, monospace;
 }
 
 home {
@@ -44,20 +46,60 @@ home {
     transform: translate(-50%, -50%);
   }
 
+  projects img {
+    width: 1.5em;
+  }
+  projects .projects-arrow:active {
+    display: none;
+  }
+  projects .projects-arrow:active + #carousel {
+    display: inline-flex;
+  }
+  projects .awards-arrow:active {
+    display: none;
+  }
+  projects .awards-arrow:active + #awards {
+    display: inline-flex;
+  }
 
 section {
-  width: 60%;
+  width: 100%;
   height: 60%;
 }
   #carousel {
-    display: inline-flex;
+    display: none;
     flex-direction: column;
   }
-    #carousel .carousel-image {
+    /* #carousel .carousel-container{
       display: block;
+    } */
+    #carousel .carousel-text {
+      width: 78%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity .75s;
+      /* display: block;
+      float: right; */
+    }
+    #carousel .carousel-image {
       width: 20%;
-      height: 20%;
       margin: 0.25em;
       opacity: 1;
-      transition: opacity 1.5s;
+      transition: opacity .1s;
+      /* display: block;
+      float: left; */
     }
+    #carousel a:hover {
+      opacity: 0.25;
+    }
+    #carousel a:hover + .carousel-text {
+      opacity: 1;
+    }
+
+    #awards {
+      display: none;
+    }
+
+resume img {
+  width: 80%;
+}

@@ -6,7 +6,7 @@ export default class Home extends Component {
   render () {
     return (
       <home>
-        <h1>LOGO//TAGLINE</h1>
+        <h1>Fullstack Programmer / Designer</h1>
       </home>
     );
   }
