@@ -5,11 +5,11 @@ body {
 sidebar {
   color: #2e373d;
   z-index: 2;
-  height: 100%;
   width: 15em;
-  transform: translateX(2em);
+  transform: translate(2em, 4em);
   display: inline-flex;
   flex-direction: column;
+  position: absolute;
 }
   sidebar h1 {
     font-size: 2em;
@@ -28,10 +28,17 @@ sidebar {
 
 page {
   width: 50%;
-  transform: translate(6em, 8em);
-  display: inline-flex;
-  flex-direction: column;
+  transform: translate(-20em, 8em);
+  /* display: inline-flex;
+  flex-direction: column; */
   font-family: Courier New, Courier, monospace;
+  float: right;
+}
+
+about img {
+  width: 1.5em;
+  padding-right: 1em;
+  padding-top: 2em;
 }
 
 home {
@@ -49,16 +56,16 @@ home {
   projects img {
     width: 1.5em;
   }
-  projects .projects-arrow:active {
+  /* projects .projects-arrow:active {
     display: none;
   }
   projects .projects-arrow:active + #carousel {
     display: inline-flex;
-  }
-  projects .awards-arrow:active {
+  } */
+  projects a:focus img{
     display: none;
   }
-  projects .awards-arrow:active + #awards {
+  projects .imageAnchor:focus img + #awards {
     display: inline-flex;
   }
 
@@ -67,7 +74,7 @@ section {
   height: 60%;
 }
   #carousel {
-    display: none;
+    display: inline-flex;
     flex-direction: column;
   }
     /* #carousel .carousel-container{
@@ -86,14 +93,29 @@ section {
       margin: 0.25em;
       opacity: 1;
       transition: opacity .1s;
+      vertical-align: middle;
       /* display: block;
       float: left; */
     }
-    #carousel a:hover {
+    #carousel .project-title {
+      padding-right: 2em;
+      font-size: 1.25em;
+      color: #2e373d;
+      text-decoration: none;
+    }
+    #carousel a:hover img {
       opacity: 0.25;
     }
     #carousel a:hover + .carousel-text {
       opacity: 1;
+    }
+    #carousel .award-title {
+      padding-top: 5em;
+      padding-right: 2em;
+      font-size: 1.25em;
+      color: #2e373d;
+      text-decoration: none;
+      vertical-align: top;
     }
 
     #awards {
@@ -101,5 +123,6 @@ section {
     }
 
 resume img {
-  width: 80%;
+  width: 100%;
+  margin-bottom: 6em;
 }

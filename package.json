@@ -1,8 +1,8 @@
 {
-  "name": "breakglass",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "start": "webpack -w & nodemon --watch server -e js,html server/app.js",
     "dev": "webpack-dev-server --env.dev",
@@ -11,18 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/breakGlass/inCaseOfEmergency.git"
+    "url": "git+https://github.com/cyng24/portfolio"
   },
-  "keywords": [
-    "meshnetwork",
-    "emergency"
-  ],
-  "author": "breakGlass",
+  "author": "cyng24",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/breakGlass/inCaseOfEmergency/issues"
-  },
-  "homepage": "https://github.com/breakGlass/inCaseOfEmergency#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -42,7 +34,6 @@
     "body-parser": "^1.18.2",
     "bootstrap": "3.3.5",
     "express": "^4.16.2",
-    "mapbox-gl": "^0.40.1",
     "path": "^0.12.7",
     "pg": "^6",
     "pg-hstore": "^2.3.2",

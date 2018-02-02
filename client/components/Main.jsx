@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Resume from './Resume';
+import Sidebar from './Sidebar.jsx';
+import Home from './Home.jsx';
+import About from './About.jsx';
+import Projects from './Projects.jsx';
+import Resume from './Resume.jsx';
 
 function Main () {
   return (

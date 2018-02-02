@@ -5,7 +5,7 @@ module.exports = {
 
   // The entry field tells webpack where our application starts.
   // Webpack will start building this file and any subsequent file(s) that are imported by that file
-  entry: './client/index.js',
+  entry: './client/index.jsx',
 
   // The output field specifies where webpack's output will go. In this case, we've specified
   // that it should put it into a file called bundle.js in our public directory
@@ -16,14 +16,6 @@ module.exports = {
 
   // The context field simply sets the context for relative pathnames
   context: __dirname,
-
-  // This handy option tells webpack to create another, special file called "bundle.js.map".
-  // This special file is called a "source-map".
-  // If enabled, your browser will automatically request this file so that it can faithfully re-create your source code in your browser's dev tools.
-  // This way, when you open the code for debugging in Chrome dev tools, instead of seeing the hard-to-read transpiled code that webpack creates, you'll
-  // see your clean source code.
-  // For more info: https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps
-  devtool: 'source-map',
 
   // Here is where we specify what kinds of special syntax webpack should look out for
   module: {

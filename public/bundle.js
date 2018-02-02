@@ -25786,14 +25786,28 @@ var About = function (_Component) {
         'about',
         null,
         _react2.default.createElement(
-          'h1',
+          'p',
           null,
-          'About'
+          'I\'m a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media.'
         ),
         _react2.default.createElement(
-          'text',
+          'p',
           null,
-          'I\'m a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media. I\'ve participated in a wide array of hackathons focused on net neutrality to oceanography. I\'ve created projects for mesh networks and VR headsets. I have a growing list of various videos, articles, personal projects, and meetups I tackle everyday, which is one of the reasons I\u2019m so interested in the tech industry. With the growth and development of new products and platforms, I\u2019ll never run out of things to learn.'
+          'I\'ve participated in a wide array of hackathons focused on subjects ranging from net neutrality to oceanography. I\'ve created projects for mesh networks and VR headsets. With the growth and development of new products and platforms, I\u2019ll never run out of things to learn.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'https://www.github.com/cyng24' },
+            _react2.default.createElement('img', { src: 'images/github.png' })
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: 'https://www.linkedin.com/in/cyng24' },
+            _react2.default.createElement('img', { src: 'images/linkedin.png' })
+          )
         )
       );
     }
@@ -25843,15 +25857,10 @@ var Projects = function (_Component) {
   _createClass(Projects, [{
     key: 'render',
     value: function render() {
+
       return _react2.default.createElement(
         'projects',
         null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Projects'
-        ),
-        _react2.default.createElement('img', { className: 'projects-arrow', src: 'images/down_arrow.png' }),
         _react2.default.createElement(
           'section',
           { id: 'carousel' },
@@ -25860,8 +25869,13 @@ var Projects = function (_Component) {
             null,
             _react2.default.createElement(
               'a',
-              { href: 'https://coquill-e559a.firebaseapp.com/' },
-              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/burnt_quill.png' })
+              { className: 'project-title', href: 'https://coquill-e559a.firebaseapp.com/' },
+              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/burnt_quill.png' }),
+              _react2.default.createElement(
+                'b',
+                null,
+                'coquill >'
+              )
             ),
             _react2.default.createElement(
               'text',
@@ -25881,8 +25895,13 @@ var Projects = function (_Component) {
             null,
             _react2.default.createElement(
               'a',
-              { href: 'https://thefinalmeltdown.glitch.me' },
-              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/finalmeltdown.png' })
+              { className: 'project-title', href: 'https://thefinalmeltdown.glitch.me' },
+              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/finalmeltdown.png' }),
+              _react2.default.createElement(
+                'b',
+                null,
+                'final meltdown >'
+              )
             ),
             _react2.default.createElement(
               'text',
@@ -25892,40 +25911,31 @@ var Projects = function (_Component) {
               'A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
-              'Try it on desktop, mobile phone, or VR gear!',
+              'Red Hat Best Open Source Project',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null)
             )
           ),
-          _react2.default.createElement('img', { className: 'carousel-image', src: 'images/electricity.png' }),
-          _react2.default.createElement('img', { className: 'carousel-image', src: 'images/fallout.png' })
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Awards'
-        ),
-        _react2.default.createElement('img', { className: 'awards-arrow', src: 'images/down_arrow.png' }),
-        _react2.default.createElement(
-          'section',
-          { id: 'awards' },
           _react2.default.createElement(
             'p',
             null,
             _react2.default.createElement(
-              'text',
-              { className: 'carousel-text' },
+              'a',
+              { className: 'award-title' },
               _react2.default.createElement(
                 'b',
                 null,
-                'Red Hat Best Open Source Project'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'i',
-                null,
-                'SheHacks Boston'
+                'SheHacks Boston >'
               )
+            ),
+            _react2.default.createElement(
+              'text',
+              { className: 'carousel-text' },
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              'Red Hat Best Open Source Project',
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null)
             )
           )
         )
@@ -25980,11 +25990,6 @@ var Resume = function (_Component) {
       return _react2.default.createElement(
         'resume',
         null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Resume'
-        ),
         _react2.default.createElement('img', { className: 'resume-image', src: 'images/resume.png' })
       );
     }
@@ -25997,4 +26002,3 @@ exports.default = Resume;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map

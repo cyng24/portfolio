@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 export default class Projects extends Component {
 
   render () {
+
     return (
       <projects>
 
-        <h1>Projects</h1><img className="projects-arrow" src="images/down_arrow.png" />
-
+      {/* <img className="projects-arrow" src="images/down_arrow.png" /> */}
         <section id="carousel">
           <p>
-            <a href="https://coquill-e559a.firebaseapp.com/"><img className="carousel-image" src="images/burnt_quill.png" /></a>  
+            <a className="project-title" href="https://coquill-e559a.firebaseapp.com/"><img className="carousel-image" src="images/burnt_quill.png" /><b>coquill ></b></a>  
             <text className="carousel-text">
             <br></br><br></br>
             A web-based tool for screenwriters to collaborate in real time on a document that auto-formats into a screenplay.
@@ -20,21 +20,30 @@ export default class Projects extends Component {
             <br></br><br></br>
             </text>
           </p>
+
           <p>
-            <a href="https://thefinalmeltdown.glitch.me"><img className="carousel-image" src="images/finalmeltdown.png" /></a>
+            <a className="project-title" href="https://thefinalmeltdown.glitch.me"><img className="carousel-image" src="images/finalmeltdown.png" /><b>final meltdown ></b></a>
             <text className="carousel-text">
             <br></br><br></br>
             A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.
             <br></br><br></br>
-            Try it on desktop, mobile phone, or VR gear!
+            Red Hat Best Open Source Project
             <br></br><br></br>
             </text>
           </p>
-            <img className="carousel-image" src="images/electricity.png" />
-            <img className="carousel-image" src="images/fallout.png" />
+
+          <p>
+            <a className="award-title"><b>SheHacks Boston ></b></a>
+            <text className="carousel-text">
+            <br></br><br></br>
+            Red Hat Best Open Source Project
+            <br></br><br></br>
+            </text>
+          </p>
         </section>
-        
-        <h1>Awards</h1><img className="awards-arrow" src="images/down_arrow.png" />
+{/*         
+        <h1>Awards</h1>
+          <img id="awards-arrow" alt="image_not" src="images/down_arrow.png" />
           <section id="awards">
             <p>
               <text className="carousel-text">
@@ -44,7 +53,9 @@ export default class Projects extends Component {
               </text>
             </p>
           </section>
+           */}
       </projects>
     );
   }
 }
+
