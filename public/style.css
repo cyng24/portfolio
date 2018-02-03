@@ -6,7 +6,7 @@ sidebar {
   color: #2e373d;
   z-index: 2;
   width: 15em;
-  transform: translate(2em, 4em);
+  transform: translate(2em, 2em);
   display: inline-flex;
   flex-direction: column;
   position: absolute;
@@ -28,7 +28,7 @@ sidebar {
 
 page {
   width: 50%;
-  transform: translate(-20em, 8em);
+  transform: translate(-20em, 6em);
   /* display: inline-flex;
   flex-direction: column; */
   font-family: Courier New, Courier, monospace;
@@ -56,39 +56,24 @@ home {
   projects img {
     width: 1.5em;
   }
-  /* projects .projects-arrow:active {
-    display: none;
-  }
-  projects .projects-arrow:active + #carousel {
-    display: inline-flex;
-  } */
-  projects a:focus img{
-    display: none;
-  }
-  projects .imageAnchor:focus img + #awards {
-    display: inline-flex;
-  }
 
 section {
   width: 100%;
   height: 60%;
 }
-  #carousel {
+  #project-list {
     display: inline-flex;
     flex-direction: column;
   }
-    /* #carousel .carousel-container{
-      display: block;
-    } */
-    #carousel .carousel-text {
-      width: 78%;
+    #project-list .project-text {
+      width: 72%;
       position: absolute;
       opacity: 0;
       transition: opacity .75s;
       /* display: block;
       float: right; */
     }
-    #carousel .carousel-image {
+    #project-list .project-image {
       width: 20%;
       margin: 0.25em;
       opacity: 1;
@@ -97,30 +82,42 @@ section {
       /* display: block;
       float: left; */
     }
-    #carousel .project-title {
+    #project-list .project-title {
       padding-right: 2em;
       font-size: 1.25em;
       color: #2e373d;
       text-decoration: none;
     }
-    #carousel a:hover img {
+    #project-list a:hover img {
       opacity: 0.25;
     }
-    #carousel a:hover + .carousel-text {
+    #project-list a:hover + .project-text {
       opacity: 1;
     }
-    #carousel .award-title {
+    #project-list .award-text {
+      width: 78%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity .75s;
+      vertical-align: middle;
+      /* display: block;
+      float: right; */
+    }
+    #project-list .award-title {
       padding-top: 5em;
       padding-right: 2em;
       font-size: 1.25em;
       color: #2e373d;
       text-decoration: none;
-      vertical-align: top;
+      vertical-align: middle;
+    }
+    #project-list a:hover + .award-text {
+      opacity: 1;
     }
 
-    #awards {
+    /* #awards {
       display: none;
-    }
+    } */
 
 resume img {
   width: 100%;

@@ -22640,7 +22640,7 @@ function Main() {
         _react2.default.createElement(
           _reactRouterDom.Switch,
           null,
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', component: _Projects2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default })
@@ -25654,9 +25654,13 @@ var Sidebar = function (_Component) {
         'sidebar',
         null,
         _react2.default.createElement(
-          'h1',
-          null,
-          'Christina Ng'
+          _reactRouterDom.Link,
+          { id: 'link', to: '/' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Christina Ng'
+          )
         ),
         _react2.default.createElement(
           'h2',
@@ -25863,14 +25867,14 @@ var Projects = function (_Component) {
         null,
         _react2.default.createElement(
           'section',
-          { id: 'carousel' },
+          { id: 'project-list' },
           _react2.default.createElement(
             'p',
             null,
             _react2.default.createElement(
               'a',
               { className: 'project-title', href: 'https://coquill-e559a.firebaseapp.com/' },
-              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/burnt_quill.png' }),
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/burnt_quill.png' }),
               _react2.default.createElement(
                 'b',
                 null,
@@ -25879,15 +25883,10 @@ var Projects = function (_Component) {
             ),
             _react2.default.createElement(
               'text',
-              { className: 'carousel-text' },
+              { className: 'project-text' },
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
-              'A web-based tool for screenwriters to collaborate in real time on a document that auto-formats into a screenplay.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              'Try writing a screenplay by clicking on the icon!',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
+              'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.'
             )
           ),
           _react2.default.createElement(
@@ -25896,7 +25895,7 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'a',
               { className: 'project-title', href: 'https://thefinalmeltdown.glitch.me' },
-              _react2.default.createElement('img', { className: 'carousel-image', src: 'images/finalmeltdown.png' }),
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/finalmeltdown.png' }),
               _react2.default.createElement(
                 'b',
                 null,
@@ -25905,15 +25904,10 @@ var Projects = function (_Component) {
             ),
             _react2.default.createElement(
               'text',
-              { className: 'carousel-text' },
+              { className: 'project-text' },
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
-              'A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              'Red Hat Best Open Source Project',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
+              'A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.'
             )
           ),
           _react2.default.createElement(
@@ -25922,20 +25916,29 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'a',
               { className: 'award-title' },
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/award.png' }),
               _react2.default.createElement(
                 'b',
                 null,
-                'SheHacks Boston >'
+                'awards >'
               )
             ),
             _react2.default.createElement(
               'text',
-              { className: 'carousel-text' },
+              { className: 'award-text' },
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
-              'Red Hat Best Open Source Project',
+              _react2.default.createElement(
+                'b',
+                null,
+                'Red Hat Best Open Source Project'
+              ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
+              _react2.default.createElement(
+                'i',
+                null,
+                'SheHacks Boston'
+              )
             )
           )
         )

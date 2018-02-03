@@ -6,7 +6,7 @@ export default class Sidebar extends Component {
   render () {
     return (
       <sidebar>
-        <h1>Christina Ng</h1>
+        <Link id="link" to="/"><h1>Christina Ng</h1></Link>
         <h2>________</h2>
           <Link id="link" to="/about">about</Link>
           <Link id="link" to="/projects">projects and awards</Link>
