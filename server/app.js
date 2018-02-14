@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 
-const db = require('./models').db;
-
 const app = express();
 
 
@@ -14,9 +12,6 @@ app.use(morgan('dev'));
 //body-parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// serve dynamic routes
-app.use('/api', require('./api'));
 
 // static file-serving middleware
 app.use(express.static(path.join(__dirname, '..', 'public')));
