@@ -25958,12 +25958,6 @@ var Projects = function (_Component) {
                   'b',
                   null,
                   'COQUILL'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'b',
-                  null,
-                  '_______'
                 )
               )
             ),
@@ -25978,12 +25972,6 @@ var Projects = function (_Component) {
                   'b',
                   null,
                   'FINAL MELTDOWN'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'b',
-                  null,
-                  '_______'
                 )
               )
             ),
@@ -25998,12 +25986,6 @@ var Projects = function (_Component) {
                   'b',
                   null,
                   'HACK THE DEEP'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'b',
-                  null,
-                  '_______'
                 )
               )
             ),
@@ -26018,12 +26000,6 @@ var Projects = function (_Component) {
                   'b',
                   null,
                   'BUTTERFLY HUNT'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'b',
-                  null,
-                  '_______'
                 )
               )
             ),
@@ -26038,12 +26014,6 @@ var Projects = function (_Component) {
                   'b',
                   null,
                   'AWARDS'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'b',
-                  null,
-                  '_______'
                 )
               )
             )
@@ -26055,6 +26025,9 @@ var Projects = function (_Component) {
               'p',
               { 'class': 'project-text coquill', style: { opacity: 0 } },
               'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.',
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              'For my capstone project at the Grace Hopper program, I learned how to use Google Firebase to update data in real-time as well as construct a series of text editors that automatically format to screenplay standards.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
@@ -26077,7 +26050,10 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               { 'class': 'project-text meltdown', style: { opacity: 0 } },
-              'A virtual reality app that depicts the effects of climate change by placing the viewer in a melting icescape.',
+              'A virtual reality app that depicts the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.',
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              'I attended SheHacks Boston, where I learned A-Frame and Glitch, and developed a platform for the Samsung Gear VR over the course of 48 hours. Out of a 100 teams, ours won Best Open Source Project.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
@@ -26132,16 +26108,7 @@ var Projects = function (_Component) {
                 'Unity C# Vuforia Android Studio'
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://www.youtube.com/watch?v=Y9MLgQTFiHk' },
-                _react2.default.createElement(
-                  'button',
-                  { 'class': 'button' },
-                  'try me'
-                )
-              )
+              _react2.default.createElement('br', null)
             ),
             _react2.default.createElement(
               'p',

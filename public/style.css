@@ -1,3 +1,28 @@
+@font-face {
+  font-family: Ailerons-Typeface;
+  src: url("Ailerons-Typeface.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Moka-Typeface;
+    src: url("Moka-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Qontra-Typeface;
+    src: url("Qontra.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Manifesto-Typeface;
+    src: url("manifesto.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: Simplifica-Typeface;
+    src: url("simplifica.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: Axis-Typeface;
+    src: url("Axis-Extrabold.otf") format("opentype");
+  }
+
 body {
   background-color: #d7dde2;
 }
@@ -10,10 +35,10 @@ sidebar {
   display: inline-flex;
   flex-direction: column;
   position: absolute;
-}
+  }
   sidebar h1 {
     font-size: 2em;
-    font-family: 'Snell Roundhand', cursive;
+    font-family: Axis-Typeface;
     margin: 0em;
   }
   sidebar h2 {
@@ -39,31 +64,31 @@ page {
 about p {
   margin-left: 10%;
   transform: translateY(-2em);
-}
-about .about-image {
-  width: 6em;
-} 
-      about .about-image2 {
-        width: 6em;
-        transform: rotate(45deg);
-      } 
-      about .about-image3 {
-        width: 6em;
-        transform: rotate(90deg);
-      } 
-      about .about-image4 {
-        width: 6em;
-        transform: rotate(135deg);
-      } 
-about .link-image {
-  width: 1.5em;
-  padding-right: 1em;
-}
+  }
+  about .about-image {
+    width: 6em;
+  } 
+  about .about-image2 {
+    width: 6em;
+    transform: rotate(45deg);
+  } 
+  about .about-image3 {
+    width: 6em;
+    transform: rotate(90deg);
+  } 
+  about .about-image4 {
+    width: 6em;
+    transform: rotate(135deg);
+  } 
+  about .link-image {
+    width: 1.5em;
+    padding-right: 1em;
+  }
 
 home {
   text-align: center;
   position: relative;
-}
+  }
   home h1 {
     position: absolute;
     top: 50%;
@@ -72,7 +97,7 @@ home {
     transform: translate(-50%, -50%);
   }
 
-  #project-list > div {
+#project-list > div {
     flex-wrap: wrap;
   }
   #flex {
@@ -84,11 +109,13 @@ home {
     }
     #project-list .project-name {
       width: 90%;
-      font-size: 95%;
+      font-size: .75em;
+      font-family: Axis-Typeface;
+      border: double;
       position: absolute;
       text-align: center;
       transition: opacity .2s; 
-      transform: translate(-110%, 150%);
+      transform: translate(-105%, 320%);
       z-index: -1;
     }
     #project-list input {
@@ -98,6 +125,7 @@ home {
     }
     #project-list .project-text {
       width: 95%;
+      font-size: 1em;
       position: absolute;
       transition: opacity .6s;
       transform: translate(2em, 0em);
@@ -107,7 +135,7 @@ home {
       background-color: #d7dde2;
       border: double;
       border-width: thin;
-      font-family: Courier New, Courier, monospace;
+      font-family: Axis-Typeface;
     }
 
 resume img {
