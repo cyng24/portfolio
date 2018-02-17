@@ -25767,13 +25767,13 @@ var Projects = function (_Component) {
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;
+          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
         }
         if (displaySetting == "1") {
           myImg[i].style.opacity = 0.2;
         }
         if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;
+          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
         }
         if (displaySetting == "0.2") {
           myImg[i].style.opacity = 1;
@@ -25787,7 +25787,7 @@ var Projects = function (_Component) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
           if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;
+            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
           }
           if (displaySetting == "0.2") {
             otherImg[i][j].style.opacity = 1;
@@ -25802,13 +25802,13 @@ var Projects = function (_Component) {
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;
+          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
         }
         if (displaySetting == "1") {
           myImg[i].style.opacity = 0.2;
         }
         if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;
+          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
         }
         if (displaySetting == "0.2") {
           myImg[i].style.opacity = 1;
@@ -25822,7 +25822,7 @@ var Projects = function (_Component) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
           if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;
+            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
           }
           if (displaySetting == "0.2") {
             otherImg[i][j].style.opacity = 1;
@@ -25837,13 +25837,13 @@ var Projects = function (_Component) {
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;
+          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
         }
         if (displaySetting == "1") {
           myImg[i].style.opacity = 0.2;
         }
         if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;
+          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
         }
         if (displaySetting == "0.2") {
           myImg[i].style.opacity = 1;
@@ -25857,7 +25857,7 @@ var Projects = function (_Component) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
           if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;
+            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
           }
           if (displaySetting == "0.2") {
             otherImg[i][j].style.opacity = 1;
@@ -25872,13 +25872,13 @@ var Projects = function (_Component) {
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;
+          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
         }
         if (displaySetting == "1") {
           myImg[i].style.opacity = 0.2;
         }
         if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;
+          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
         }
         if (displaySetting == "0.2") {
           myImg[i].style.opacity = 1;
@@ -25892,7 +25892,7 @@ var Projects = function (_Component) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
           if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;
+            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
           }
           if (displaySetting == "0.2") {
             otherImg[i][j].style.opacity = 1;
@@ -25907,13 +25907,13 @@ var Projects = function (_Component) {
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;
+          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
         }
         if (displaySetting == "1") {
           myImg[i].style.opacity = 0.2;
         }
         if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;
+          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
         }
         if (displaySetting == "0.2") {
           myImg[i].style.opacity = 1;
@@ -25927,7 +25927,7 @@ var Projects = function (_Component) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
           if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;
+            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
           }
           if (displaySetting == "0.2") {
             otherImg[i][j].style.opacity = 1;
@@ -26023,7 +26023,7 @@ var Projects = function (_Component) {
             null,
             _react2.default.createElement(
               'p',
-              { 'class': 'project-text coquill', style: { opacity: 0 } },
+              { 'class': 'project-text coquill', style: { opacity: 0, zIndex: -1 } },
               'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
@@ -26049,7 +26049,7 @@ var Projects = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              { 'class': 'project-text meltdown', style: { opacity: 0 } },
+              { 'class': 'project-text meltdown', style: { opacity: 0, zIndex: -1 } },
               'A virtual reality app that depicts the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
@@ -26075,7 +26075,7 @@ var Projects = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              { 'class': 'project-text deep', style: { opacity: 0 } },
+              { 'class': 'project-text deep', style: { opacity: 0, zIndex: -1 } },
               'A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
@@ -26098,7 +26098,7 @@ var Projects = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              { 'class': 'project-text butterfly', style: { opacity: 0 } },
+              { 'class': 'project-text butterfly', style: { opacity: 0, zIndex: -1 } },
               'A mobile augmented reality game where Grace Hopper students search for butterflies that appear on the the GH logo.',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
@@ -26108,11 +26108,20 @@ var Projects = function (_Component) {
                 'Unity C# Vuforia Android Studio'
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'a',
+                { href: 'https://www.youtube.com/watch?v=Y9MLgQTFiHk' },
+                _react2.default.createElement(
+                  'button',
+                  { 'class': 'button' },
+                  'try me'
+                )
+              )
             ),
             _react2.default.createElement(
               'p',
-              { 'class': 'project-text award', style: { opacity: 0 } },
+              { 'class': 'project-text award', style: { opacity: 0, zIndex: -1 } },
               _react2.default.createElement(
                 'b',
                 null,

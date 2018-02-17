@@ -1,26 +1,26 @@
 @font-face {
   font-family: Ailerons-Typeface;
-  src: url("Ailerons-Typeface.otf") format("opentype");
+  src: url("typefaces/Ailerons-Typeface.otf") format("opentype");
   }
   @font-face {
     font-family: Moka-Typeface;
-    src: url("Moka-Regular.otf") format("opentype");
+    src: url("typefaces/Moka-Regular.otf") format("opentype");
   }
   @font-face {
     font-family: Qontra-Typeface;
-    src: url("Qontra.otf") format("opentype");
+    src: url("typefaces/Qontra.otf") format("opentype");
   }
   @font-face {
     font-family: Manifesto-Typeface;
-    src: url("manifesto.ttf") format("truetype");
+    src: url("typefaces/manifesto.ttf") format("truetype");
   }
   @font-face {
     font-family: Simplifica-Typeface;
-    src: url("simplifica.ttf") format("truetype");
+    src: url("typefaces/simplifica.ttf") format("truetype");
   }
   @font-face {
     font-family: Axis-Typeface;
-    src: url("Axis-Extrabold.otf") format("opentype");
+    src: url("typefaces/Axis-Extrabold.otf") format("opentype");
   }
 
 body {
