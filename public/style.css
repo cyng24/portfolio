@@ -142,3 +142,91 @@ resume img {
   width: 100%;
   margin-bottom: 6em;
 }
+
+christina #link {
+  color: #2e373d;
+  font-family: Courier New, Courier, monospace;
+  text-decoration: overline;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  }
+  #design-list {
+    text-align: center;
+  }
+
+graphics #link {
+  color: #2e373d;
+  font-family: Courier New, Courier, monospace;
+  text-decoration: overline;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  }
+  #design-list {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  #box {
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+  }
+  graphics img.vertical {
+    position: absolute;
+    width: 100%;
+    transition: opacity .2s;
+  }
+  graphics img.horizontal {
+    position: absolute;
+    height: 100%;
+  }
+  graphics img.whale {
+    transform: translateY(-2.5em);
+  }
+  graphics img.evidence {
+    transform: translateY(-4em);
+  }
+  graphics img.ashes {
+    transform: translateX(-4em);
+  }
+photography #link {
+  color: #2e373d;
+  font-family: Courier New, Courier, monospace;
+  text-decoration: overline;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  }
+  #design-list {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  #box {
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+  }
+  photography .link-image {
+    width: 1.5em;
+    display: block;
+    margin: 2em auto;
+  }
+  photography img.vertical {
+    position: absolute;
+    width: 100%;
+    transition: opacity .2s;
+  }
+  photography img.horizontal {
+    position: absolute;
+    height: 100%;
+  }
+  photography img.gate {
+    transform: translateX(-4em);
+  }

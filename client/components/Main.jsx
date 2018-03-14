@@ -5,6 +5,9 @@ import Home from './Home.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Resume from './Resume.jsx';
+import Christina from './Christina.jsx';
+import Graphics from './Graphics.jsx';
+import Photography from './Photography.jsx';
 
 function Main () {
   return (
@@ -17,6 +20,9 @@ function Main () {
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/resume" component={Resume} />
+          <Route exact path="/christina" component={Christina} />
+          <Route exact path="/christina/the-graphicdesigner" component={Graphics} />
+          <Route exact path="/christina/the-photographer" component={Photography} />
         </Switch>
         </page>
       </div>

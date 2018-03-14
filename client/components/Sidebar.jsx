@@ -11,6 +11,7 @@ export default class Sidebar extends Component {
           <Link id="link" to="/about">about</Link>
           <Link id="link" to="/projects">projects and awards</Link>
           <Link id="link" to="/resume">resume</Link>
+          <Link id="link" to="/christina">designs</Link>
       </sidebar>
     );
   }

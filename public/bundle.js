@@ -22518,6 +22518,18 @@ var _Resume = __webpack_require__(117);
 
 var _Resume2 = _interopRequireDefault(_Resume);
 
+var _Christina = __webpack_require__(119);
+
+var _Christina2 = _interopRequireDefault(_Christina);
+
+var _Graphics = __webpack_require__(118);
+
+var _Graphics2 = _interopRequireDefault(_Graphics);
+
+var _Photography = __webpack_require__(120);
+
+var _Photography2 = _interopRequireDefault(_Photography);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main() {
@@ -22537,7 +22549,10 @@ function Main() {
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', component: _Projects2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina', component: _Christina2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-graphicdesigner', component: _Graphics2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-photographer', component: _Photography2.default })
         )
       )
     )
@@ -25575,6 +25590,11 @@ var Sidebar = function (_Component) {
           _reactRouterDom.Link,
           { id: 'link', to: '/resume' },
           'resume'
+        ),
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { id: 'link', to: '/christina' },
+          'designs'
         )
       );
     }
@@ -26196,6 +26216,319 @@ var Resume = function (_Component) {
 }(_react.Component);
 
 exports.default = Resume;
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Graphics = function (_Component) {
+  _inherits(Graphics, _Component);
+
+  function Graphics() {
+    _classCallCheck(this, Graphics);
+
+    return _possibleConstructorReturn(this, (Graphics.__proto__ || Object.getPrototypeOf(Graphics)).apply(this, arguments));
+  }
+
+  _createClass(Graphics, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'graphics',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-setdesigner' },
+            'film and stage'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-photographer' },
+            'photography'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'graphic-list' },
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical whale', src: 'graphics/junk_whale.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'graphics/lib_elec.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical evidence', src: 'graphics/evidence.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal ashes', src: 'graphics/ashes.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'graphics/fiji.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'graphics/tonga.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Graphics;
+}(_react.Component);
+
+exports.default = Graphics;
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Christina = function (_Component) {
+  _inherits(Christina, _Component);
+
+  function Christina() {
+    _classCallCheck(this, Christina);
+
+    return _possibleConstructorReturn(this, (Christina.__proto__ || Object.getPrototypeOf(Christina)).apply(this, arguments));
+  }
+
+  _createClass(Christina, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'christina',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-setdesigner' },
+            'film and stage'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-photographer' },
+            'photography'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Christina;
+}(_react.Component);
+
+exports.default = Christina;
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Photography = function (_Component) {
+  _inherits(Photography, _Component);
+
+  function Photography() {
+    _classCallCheck(this, Photography);
+
+    return _possibleConstructorReturn(this, (Photography.__proto__ || Object.getPrototypeOf(Photography)).apply(this, arguments));
+  }
+
+  _createClass(Photography, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'photography',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-setdesigner' },
+            'film and stage'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'link', to: '/christina/the-photographer' },
+            'photography'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'photo-list' },
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'photos/NY-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'photos/NY-2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'photos/NY-3.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'vertical', src: 'photos/NY-4.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal', src: 'photos/NY-5.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal gate', src: 'photos/CH-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal', src: 'photos/CH-2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal', src: 'photos/BA-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'box' },
+            _react2.default.createElement('img', { 'class': 'horizontal', src: 'photos/CP-1.jpg' })
+          )
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://www.instagram.com/thatquibblefish/' },
+          _react2.default.createElement('img', { className: 'link-image', src: 'images/insta.png' })
+        )
+      );
+    }
+  }]);
+
+  return Photography;
+}(_react.Component);
+
+exports.default = Photography;
 
 /***/ })
 /******/ ]);
