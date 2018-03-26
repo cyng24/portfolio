@@ -14,35 +14,35 @@ export default class Photography extends Component {
         </section>
 
         <section id="photo-list">
-          <div id="box">
-            <img class="vertical" src="photos/NY-1.jpg" />
+          <div class="box vertical">
+            <img class="photo" src="photos/NY-1.jpg" />
           </div>
-          <div id="box">
-            <img class="vertical" src="photos/NY-2.jpg" />
+          <div class="box vertical">
+            <img class="photo" src="photos/NY-2.jpg" />
           </div>
-          <div id="box">
-            <img class="vertical" src="photos/NY-3.jpg" />
+          <div class="box vertical">
+            <img class="photo" src="photos/NY-3.jpg" />
           </div>
-          <div id="box">
-            <img class="vertical" src="photos/NY-4.jpg" />
+          <div class="box vertical">
+            <img class="photo" src="photos/NY-4.jpg" />
           </div>
-          <div id="box">
-            <img class="horizontal" src="photos/NY-5.jpg" />
+          <div class="box horizontal">
+            <img class="photo" src="photos/NY-5.jpg" />
           </div>
-          <div id="box">
-            <img class="horizontal gate" src="photos/CH-1.jpg" />
+          <div class="box horizontal">
+            <img class="photo" src="photos/CH-1.jpg" />
           </div>
-          <div id="box">
-            <img class="horizontal" src="photos/CH-2.jpg" />
+          <div class="box horizontal">
+            <img class="photo" src="photos/CH-2.jpg" />
           </div>
-          <div id="box">
-            <img class="horizontal" src="photos/BA-1.jpg" />
+          <div class="box horizontal">
+            <img class="photo" src="photos/BA-1.jpg" />
           </div>
-          <div id="box">
-            <img class="horizontal" src="photos/CP-1.jpg" />
+          <div class="box horizontal">
+            <img class="photo" src="photos/CP-1.jpg" />
           </div>
         </section>
-        <a href="https://www.instagram.com/thatquibblefish/"><img className="link-image" src="images/insta.png" /></a>
+        {/* <a href="https://www.instagram.com/thatquibblefish/"><img className="link-image" src="images/insta.png" /></a> */}
       </photography>
     );
   }

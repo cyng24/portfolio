@@ -153,7 +153,28 @@ christina #link {
   }
   #design-list {
     text-align: center;
+    padding-bottom: 1em;
   }
+
+.box {
+  width: 2%;
+  margin: 0.5%;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  padding-bottom: 45%;
+  transition: width 1s;
+}
+/* .vertical.box:active {
+  text-align: left;
+  width: 35%;
+  transition: width 2s, z-index 2s, position 2s;
+}
+.horizontal.box:active{
+  text-align: left;
+  width: 60%;
+  transition: width 2s, z-index 2s, position 2s;
+} */
 
 graphics #link {
   color: #2e373d;
@@ -163,36 +184,14 @@ graphics #link {
   padding-left: 2em;
   padding-right: 2em;
   }
-  #design-list {
-    text-align: center;
-    padding-bottom: 1em;
-  }
-  #box {
-    width: 31%;
-    padding-bottom: 31%;
-    margin: 1%;
-    overflow: hidden;
-    position: relative;
-    display: inline-flex;
-  }
-  graphics img.vertical {
-    position: absolute;
-    width: 100%;
-    transition: opacity .2s;
-  }
-  graphics img.horizontal {
+  img.graphic {
     position: absolute;
     height: 100%;
   }
-  graphics img.whale {
-    transform: translateY(-2.5em);
+  #graphic-list {
+    text-align: center;
   }
-  graphics img.evidence {
-    transform: translateY(-4em);
-  }
-  graphics img.ashes {
-    transform: translateX(-4em);
-  }
+
 photography #link {
   color: #2e373d;
   font-family: Courier New, Courier, monospace;
@@ -201,32 +200,15 @@ photography #link {
   padding-left: 2em;
   padding-right: 2em;
   }
-  #design-list {
-    text-align: center;
-    padding-bottom: 1em;
-  }
-  #box {
-    width: 31%;
-    padding-bottom: 31%;
-    margin: 1%;
-    overflow: hidden;
-    position: relative;
-    display: inline-flex;
-  }
   photography .link-image {
     width: 1.5em;
     display: block;
     margin: 2em auto;
   }
-  photography img.vertical {
-    position: absolute;
-    width: 100%;
-    transition: opacity .2s;
-  }
-  photography img.horizontal {
+  img.photo {
     position: absolute;
     height: 100%;
   }
-  photography img.gate {
-    transform: translateX(-4em);
+  #photo-list {
+    text-align: center;
   }

@@ -25,7 +25,6 @@ export default class Projects extends Component {
       }
     }
   }
-
   meltdownClick() { 
     var myImg = document.getElementsByClassName('meltdown');
     for (var i=0; i<myImg.length; i++) {
@@ -47,7 +46,6 @@ export default class Projects extends Component {
       }
     }
   }
-
   deepClick() { 
     var myImg = document.getElementsByClassName('deep');
     for (var i=0; i<myImg.length; i++) {
@@ -69,7 +67,6 @@ export default class Projects extends Component {
       }
     }
   }
-
   butterflyClick() { 
     var myImg = document.getElementsByClassName('butterfly');
     for (var i=0; i<myImg.length; i++) {
@@ -91,7 +88,6 @@ export default class Projects extends Component {
       }
     }
   }
-
   awardClick() { 
     var myImg = document.getElementsByClassName('award');
     for (var i=0; i<myImg.length; i++) {
