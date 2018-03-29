@@ -25,6 +25,7 @@
 
 body {
   background-color: #d7dde2;
+  font-family: Courier New, Courier, monospace;
 }
 
 sidebar {
@@ -47,18 +48,16 @@ sidebar {
   }
   sidebar #link {
     color: #2e373d;
-    font-family: Courier New, Courier, monospace;
     text-decoration: none;
   }
 
 page {
-  width: 58%;
+  width: 60%;
   position: absolute;
   top: 30%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);
-  font-family: Courier New, Courier, monospace;
 }
 
 about p {
@@ -85,17 +84,7 @@ about p {
     padding-right: 1em;
   }
 
-home {
-  text-align: center;
-  position: relative;
-  }
-  home h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+
 
 #project-list > div {
     flex-wrap: wrap;
@@ -131,11 +120,11 @@ home {
       transform: translate(2em, 0em);
     }
     #project-list .button {
-      color: black;
-      background-color: #d7dde2;
+      font-family: Axis-Typeface;
       border: double;
       border-width: thin;
-      font-family: Axis-Typeface;
+      color: black;
+      background-color: #d7dde2;
     }
 
 resume img {
@@ -143,9 +132,8 @@ resume img {
   margin-bottom: 6em;
 }
 
-christina #link {
+#christinalinks {
   color: #2e373d;
-  font-family: Courier New, Courier, monospace;
   text-decoration: overline;
   display: inline-block;
   padding-left: 2em;
@@ -154,6 +142,13 @@ christina #link {
   #design-list {
     text-align: center;
     padding-bottom: 1em;
+  }
+  #christina-list {
+    text-align: center;
+  }
+  img.christina-item {
+    position: absolute;
+    height: 100%;
   }
 
 .box {
@@ -165,50 +160,9 @@ christina #link {
   padding-bottom: 45%;
   transition: width 1s;
 }
-/* .vertical.box:active {
-  text-align: left;
-  width: 35%;
-  transition: width 2s, z-index 2s, position 2s;
-}
-.horizontal.box:active{
-  text-align: left;
-  width: 60%;
-  transition: width 2s, z-index 2s, position 2s;
-} */
 
-graphics #link {
-  color: #2e373d;
-  font-family: Courier New, Courier, monospace;
-  text-decoration: overline;
-  display: inline-block;
-  padding-left: 2em;
-  padding-right: 2em;
-  }
-  img.graphic {
-    position: absolute;
-    height: 100%;
-  }
-  #graphic-list {
-    text-align: center;
-  }
-
-photography #link {
-  color: #2e373d;
-  font-family: Courier New, Courier, monospace;
-  text-decoration: overline;
-  display: inline-block;
-  padding-left: 2em;
-  padding-right: 2em;
-  }
-  photography .link-image {
+/* photography .link-image {
     width: 1.5em;
     display: block;
     margin: 2em auto;
-  }
-  img.photo {
-    position: absolute;
-    height: 100%;
-  }
-  #photo-list {
-    text-align: center;
-  }
+  } */

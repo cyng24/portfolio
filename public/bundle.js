@@ -22530,6 +22530,10 @@ var _Photography = __webpack_require__(120);
 
 var _Photography2 = _interopRequireDefault(_Photography);
 
+var _Architecture = __webpack_require__(121);
+
+var _Architecture2 = _interopRequireDefault(_Architecture);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main() {
@@ -22552,7 +22556,8 @@ function Main() {
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina', component: _Christina2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-graphicdesigner', component: _Graphics2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-photographer', component: _Photography2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-photographer', component: _Photography2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-architect', component: _Architecture2.default })
         )
       )
     )
@@ -26264,22 +26269,22 @@ var Christina = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-architect' },
+            { id: 'christinalinks', to: '/christina/the-architect' },
             'architecture'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-setdesigner' },
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
             'film and stage'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-graphicdesigner' },
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
             'graphics'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-photographer' },
+            { id: 'christinalinks', to: '/christina/the-photographer' },
             'photography'
           )
         )
@@ -26329,101 +26334,27 @@ var Graphics = function (_Component) {
   }
 
   _createClass(Graphics, [{
-    key: 'whaleClick',
-    value: function whaleClick() {
-      var myImg = document.getElementsByClassName('whale');
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
-        if (displaySetting == "15px") {
-          myImg[i].style.width = "215px";
+        if (displaySetting == "18px") {
+          myImg[i].style.width = expandSize;
         }
-        if (displaySetting == "215px") {
-          myImg[i].style.width = "15px";
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "18px";
         }
       }
-      var otherImg = [document.getElementsByClassName('lib')];
-      otherImg.push(document.getElementsByClassName('evidence'));
-      otherImg.push(document.getElementsByClassName('ashes'));
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "15px") {
-            otherImg[i][j].style.width = "15px";
-          }
-        }
-      }
-    }
-  }, {
-    key: 'libClick',
-    value: function libClick() {
-      var myImg = document.getElementsByClassName('lib');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.width;
-        if (displaySetting == "15px") {
-          myImg[i].style.width = "315px";
-        }
-        if (displaySetting == "315px") {
-          myImg[i].style.width = "15px";
-        }
-      }
-      var otherImg = [document.getElementsByClassName('whale')];
-      otherImg.push(document.getElementsByClassName('evidence'));
-      otherImg.push(document.getElementsByClassName('ashes'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "15px") {
-            otherImg[i][j].style.width = "15px";
-          }
-        }
-      }
-    }
-  }, {
-    key: 'evidenceClick',
-    value: function evidenceClick() {
-      var myImg = document.getElementsByClassName('evidence');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.width;
-        if (displaySetting == "15px") {
-          myImg[i].style.width = "217px";
-        }
-        if (displaySetting == "217px") {
-          myImg[i].style.width = "15px";
-        }
-      }
-      var otherImg = [document.getElementsByClassName('whale')];
-      otherImg.push(document.getElementsByClassName('lib'));
-      otherImg.push(document.getElementsByClassName('ashes'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "15px") {
-            otherImg[i][j].style.width = "15px";
-          }
-        }
-      }
-    }
-  }, {
-    key: 'ashesClick',
-    value: function ashesClick() {
-      var myImg = document.getElementsByClassName('ashes');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.width;
-        if (displaySetting == "15px") {
-          myImg[i].style.width = "452px";
-        }
-        if (displaySetting == "452px") {
-          myImg[i].style.width = "15px";
-        }
-      }
-      var otherImg = [document.getElementsByClassName('whale')];
-      otherImg.push(document.getElementsByClassName('lib'));
-      otherImg.push(document.getElementsByClassName('evidence'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "15px") {
-            otherImg[i][j].style.width = "15px";
+          if (displaySetting != "18px") {
+            otherImg[i][j].style.width = "18px";
           }
         }
       }
@@ -26431,6 +26362,8 @@ var Graphics = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'graphics',
         null,
@@ -26439,57 +26372,69 @@ var Graphics = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-architect' },
+            { id: 'christinalinks', to: '/christina/the-architect' },
             'architecture'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-setdesigner' },
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
             'film and stage'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-graphicdesigner' },
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
             'graphics'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-photographer' },
+            { id: 'christinalinks', to: '/christina/the-photographer' },
             'photography'
           )
         ),
         _react2.default.createElement(
           'section',
-          { id: 'graphic-list' },
+          { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical whale', style: { width: 15 }, onClick: this.whaleClick },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/junk_whale.jpg' })
+            { 'class': 'box vertical whale', style: { width: 18 }, focus: "whale", others: ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "227px", onClick: function onClick() {
+                return _this2.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "227px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/junk_whale.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical lib', style: { width: 15 }, onClick: this.libClick },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/lib_elec.jpg' })
+            { 'class': 'box vertical lib', style: { width: 18 }, focus: "lib", others: ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "330px", onClick: function onClick() {
+                return _this2.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "330px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/lib_elec.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical evidence', style: { width: 15 }, onClick: this.evidenceClick },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/evidence.jpg' })
+            { 'class': 'box vertical evidence', style: { width: 18 }, focus: "evidence", others: ['whale', 'lib', 'ashes', 'fiji', 'tonga'], expandSize: "220px", onClick: function onClick() {
+                return _this2.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "220px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/evidence.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal ashes', style: { width: 15 }, onClick: this.ashesClick },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/ashes.jpg' })
+            { 'class': 'box horizontal ashes', style: { width: 18 }, focus: "ashes", others: ['whale', 'lib', 'evidence', 'fiji', 'tonga'], expandSize: "468px", onClick: function onClick() {
+                return _this2.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "468px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/ashes.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical fiji' },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/fiji.jpg' })
+            { 'class': 'box vertical fiji', style: { width: 18 }, focus: "fiji", others: ['whale', 'lib', 'evidence', 'ashes', 'tonga'], expandSize: "232px", onClick: function onClick() {
+                return _this2.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "232px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/fiji.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical tonga' },
-            _react2.default.createElement('img', { 'class': 'graphic', src: 'graphics/tonga.jpg' })
+            { 'class': 'box vertical tonga', style: { width: 18 }, focus: "tonga", others: ['whale', 'lib', 'evidence', 'ashes', 'fiji'], expandSize: "232px", onClick: function onClick() {
+                return _this2.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "232px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/tonga.jpg' })
           )
         )
       );
@@ -26538,8 +26483,36 @@ var Photography = function (_Component) {
   }
 
   _createClass(Photography, [{
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
+      for (var i = 0; i < myImg.length; i++) {
+        var displaySetting = myImg[i].style.width;
+        if (displaySetting == "18px") {
+          myImg[i].style.width = expandSize;
+        }
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "18px";
+        }
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "18px") {
+            otherImg[i][j].style.width = "18px";
+          }
+        }
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'photography',
         null,
@@ -26548,72 +26521,90 @@ var Photography = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-architect' },
+            { id: 'christinalinks', to: '/christina/the-architect' },
             'architecture'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-setdesigner' },
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
             'film and stage'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-graphicdesigner' },
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
             'graphics'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'link', to: '/christina/the-photographer' },
+            { id: 'christinalinks', to: '/christina/the-photographer' },
             'photography'
           )
         ),
         _react2.default.createElement(
           'section',
-          { id: 'photo-list' },
+          { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/NY-1.jpg' })
+            { 'class': 'box vertical NY1', style: { width: 18 }, focus: 'NY1', others: ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "276px", onClick: function onClick() {
+                return _this2.click('NY1', ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "276px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/NY-2.jpg' })
+            { 'class': 'box vertical NY2', style: { width: 18 }, focus: 'NY2', others: ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "276px", onClick: function onClick() {
+                return _this2.click('NY2', ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "276px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/NY-3.jpg' })
+            { 'class': 'box vertical NY3', style: { width: 18 }, focus: 'NY3', others: ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "347px", onClick: function onClick() {
+                return _this2.click('NY3', ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "347px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-3.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/NY-4.jpg' })
+            { 'class': 'box vertical NY4', style: { width: 18 }, focus: 'NY4', others: ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "347px", onClick: function onClick() {
+                return _this2.click('NY4', ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "347px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-4.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/NY-5.jpg' })
+            { 'class': 'box horizontal NY5', style: { width: 18 }, focus: 'NY5', others: ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "463px", onClick: function onClick() {
+                return _this2.click('NY5', ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], "463px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-5.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/CH-1.jpg' })
+            { 'class': 'box horizontal CH1', style: { width: 18 }, focus: 'CH1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], expandSize: "520px", onClick: function onClick() {
+                return _this2.click('CH1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], "520px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/CH-2.jpg' })
+            { 'class': 'box horizontal CH2', style: { width: 18 }, focus: 'CH2', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], expandSize: "520px", onClick: function onClick() {
+                return _this2.click('CH2', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], "520px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/BA-1.jpg' })
+            { 'class': 'box horizontal BA1', style: { width: 18 }, focus: 'BA1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], expandSize: "433px", onClick: function onClick() {
+                return _this2.click('BA1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], "433px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/BA-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal' },
-            _react2.default.createElement('img', { 'class': 'photo', src: 'photos/CP-1.jpg' })
+            { 'class': 'box horizontal CP1', style: { width: 18 }, focus: 'CP1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], expandSize: "520px", onClick: function onClick() {
+                return _this2.click('CP1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], "520px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CP-1.jpg' })
           )
         )
       );
@@ -26624,6 +26615,134 @@ var Photography = function (_Component) {
 }(_react.Component);
 
 exports.default = Photography;
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Architecture = function (_Component) {
+  _inherits(Architecture, _Component);
+
+  function Architecture() {
+    _classCallCheck(this, Architecture);
+
+    return _possibleConstructorReturn(this, (Architecture.__proto__ || Object.getPrototypeOf(Architecture)).apply(this, arguments));
+  }
+
+  _createClass(Architecture, [{
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
+      for (var i = 0; i < myImg.length; i++) {
+        var displaySetting = myImg[i].style.width;
+        if (displaySetting == "18px") {
+          myImg[i].style.width = expandSize;
+        }
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "18px";
+        }
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "18px") {
+            otherImg[i][j].style.width = "18px";
+          }
+        }
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'graphics',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 34H', style: { width: 18 }, focus: "34H", others: ['41G'], expandSize: "227px", onClick: function onClick() {
+                return _this2.click("34H", ['41G'], "227px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 34H', style: { width: 18 }, focus: "34H2", others: ['41G'], expandSize: "330px", onClick: function onClick() {
+                return _this2.click("34H", ['41G'], "330px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 41G', style: { width: 18 }, focus: "41G", others: ['34H'], expandSize: "330px", onClick: function onClick() {
+                return _this2.click("41G", ['34H'], "330px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/41G1.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Architecture;
+}(_react.Component);
+
+exports.default = Architecture;
 
 /***/ })
 /******/ ]);

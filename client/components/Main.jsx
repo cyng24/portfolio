@@ -8,6 +8,7 @@ import Resume from './Resume.jsx';
 import Christina from './Christina.jsx';
 import Graphics from './Graphics.jsx';
 import Photography from './Photography.jsx';
+import Architecture from './Architecture.jsx';
 
 function Main () {
   return (
@@ -23,6 +24,7 @@ function Main () {
           <Route exact path="/christina" component={Christina} />
           <Route exact path="/christina/the-graphicdesigner" component={Graphics} />
           <Route exact path="/christina/the-photographer" component={Photography} />
+          <Route exact path="/christina/the-architect" component={Architecture} />
         </Switch>
         </page>
       </div>
