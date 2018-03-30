@@ -9,6 +9,7 @@ import Christina from './Christina.jsx';
 import Graphics from './Graphics.jsx';
 import Photography from './Photography.jsx';
 import Architecture from './Architecture.jsx';
+import Filmstage from './Filmstage.jsx';
 
 function Main () {
   return (
@@ -22,9 +23,10 @@ function Main () {
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/resume" component={Resume} />
           <Route exact path="/christina" component={Christina} />
+          <Route exact path="/christina/the-architect" component={Architecture} />
+          <Route exact path="/christina/the-setdesigner" component={Filmstage} />
           <Route exact path="/christina/the-graphicdesigner" component={Graphics} />
           <Route exact path="/christina/the-photographer" component={Photography} />
-          <Route exact path="/christina/the-architect" component={Architecture} />
         </Switch>
         </page>
       </div>

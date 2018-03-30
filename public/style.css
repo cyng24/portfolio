@@ -52,7 +52,7 @@ sidebar {
   }
 
 page {
-  width: 60%;
+  width: 65%;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -152,7 +152,6 @@ resume img {
   }
 
 .box {
-  width: 2%;
   margin: 0.5%;
   overflow: hidden;
   position: relative;
