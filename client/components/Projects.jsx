@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default class Projects extends Component {
 
-  coquillClick() { 
-    var myImg = document.getElementsByClassName('coquill');
+  click(focus, others) { 
+    var myImg = document.getElementsByClassName(focus);
     for (var i=0; i<myImg.length; i++) {
       var displaySetting = myImg[i].style.opacity;
       if (displaySetting == "0") { myImg[i].style.opacity = 0.9; myImg[i].style.zIndex = 3}
@@ -12,95 +12,10 @@ export default class Projects extends Component {
       if (displaySetting == "0.9") { myImg[i].style.opacity = 0; myImg[i].style.zIndex = -1}
       if (displaySetting == "0.2") { myImg[i].style.opacity = 1; }
     }
-    var otherImg = [document.getElementsByClassName('meltdown')];
-    otherImg.push(document.getElementsByClassName('deep'));
-    otherImg.push(document.getElementsByClassName('butterfly'));
-    otherImg.push(document.getElementsByClassName('award'));
-    for (var i=0; i<otherImg.length; i++) {
-      for (var j=0; j<otherImg[i].length; j++) {
-        var displaySetting = otherImg[i][j].style.opacity;
-        if (displaySetting == "0.9") { otherImg[i][j].style.opacity = 0; otherImg[i][j].style.zIndex = -1}
-        if (displaySetting == "0.2") { otherImg[i][j].style.opacity = 1;}
-        
-      }
+    var otherImg = [];
+    for (var i=0; i<others.length; i++) {
+      otherImg.push(document.getElementsByClassName(others[i]));
     }
-  }
-  meltdownClick() { 
-    var myImg = document.getElementsByClassName('meltdown');
-    for (var i=0; i<myImg.length; i++) {
-      var displaySetting = myImg[i].style.opacity;
-      if (displaySetting == "0") { myImg[i].style.opacity = 0.9; myImg[i].style.zIndex = 3}
-      if (displaySetting == "1") { myImg[i].style.opacity = 0.2; }
-      if (displaySetting == "0.9") { myImg[i].style.opacity = 0; myImg[i].style.zIndex = -1}
-      if (displaySetting == "0.2") { myImg[i].style.opacity = 1; }
-    }
-    var otherImg = [document.getElementsByClassName('coquill')];
-    otherImg.push(document.getElementsByClassName('deep'));
-    otherImg.push(document.getElementsByClassName('butterfly'));
-    otherImg.push(document.getElementsByClassName('award'));
-    for (var i=0; i<otherImg.length; i++) {
-      for (var j=0; j<otherImg[i].length; j++) {
-        var displaySetting = otherImg[i][j].style.opacity;
-        if (displaySetting == "0.9") { otherImg[i][j].style.opacity = 0; otherImg[i][j].style.zIndex = -1}
-        if (displaySetting == "0.2") { otherImg[i][j].style.opacity = 1;}
-      }
-    }
-  }
-  deepClick() { 
-    var myImg = document.getElementsByClassName('deep');
-    for (var i=0; i<myImg.length; i++) {
-      var displaySetting = myImg[i].style.opacity;
-      if (displaySetting == "0") { myImg[i].style.opacity = 0.9; myImg[i].style.zIndex = 3}
-      if (displaySetting == "1") { myImg[i].style.opacity = 0.2; }
-      if (displaySetting == "0.9") { myImg[i].style.opacity = 0; myImg[i].style.zIndex = -1}
-      if (displaySetting == "0.2") { myImg[i].style.opacity = 1; }
-    }
-    var otherImg = [document.getElementsByClassName('coquill')];
-    otherImg.push(document.getElementsByClassName('meltdown'));
-    otherImg.push(document.getElementsByClassName('butterfly'));
-    otherImg.push(document.getElementsByClassName('award'));
-    for (var i=0; i<otherImg.length; i++) {
-      for (var j=0; j<otherImg[i].length; j++) {
-        var displaySetting = otherImg[i][j].style.opacity;
-        if (displaySetting == "0.9") { otherImg[i][j].style.opacity = 0; otherImg[i][j].style.zIndex = -1}
-        if (displaySetting == "0.2") { otherImg[i][j].style.opacity = 1;}
-      }
-    }
-  }
-  butterflyClick() { 
-    var myImg = document.getElementsByClassName('butterfly');
-    for (var i=0; i<myImg.length; i++) {
-      var displaySetting = myImg[i].style.opacity;
-      if (displaySetting == "0") { myImg[i].style.opacity = 0.9; myImg[i].style.zIndex = 3}
-      if (displaySetting == "1") { myImg[i].style.opacity = 0.2; }
-      if (displaySetting == "0.9") { myImg[i].style.opacity = 0; myImg[i].style.zIndex = -1}
-      if (displaySetting == "0.2") { myImg[i].style.opacity = 1; }
-    }
-    var otherImg = [document.getElementsByClassName('coquill')];
-    otherImg.push(document.getElementsByClassName('meltdown'));
-    otherImg.push(document.getElementsByClassName('deep'));
-    otherImg.push(document.getElementsByClassName('award'));
-    for (var i=0; i<otherImg.length; i++) {
-      for (var j=0; j<otherImg[i].length; j++) {
-        var displaySetting = otherImg[i][j].style.opacity;
-        if (displaySetting == "0.9") { otherImg[i][j].style.opacity = 0; otherImg[i][j].style.zIndex = -1}
-        if (displaySetting == "0.2") { otherImg[i][j].style.opacity = 1;}
-      }
-    }
-  }
-  awardClick() { 
-    var myImg = document.getElementsByClassName('award');
-    for (var i=0; i<myImg.length; i++) {
-      var displaySetting = myImg[i].style.opacity;
-      if (displaySetting == "0") { myImg[i].style.opacity = 0.9; myImg[i].style.zIndex = 3}
-      if (displaySetting == "1") { myImg[i].style.opacity = 0.2; }
-      if (displaySetting == "0.9") { myImg[i].style.opacity = 0; myImg[i].style.zIndex = -1}
-      if (displaySetting == "0.2") { myImg[i].style.opacity = 1; }
-    }
-    var otherImg = [document.getElementsByClassName('coquill')];
-    otherImg.push(document.getElementsByClassName('meltdown'));
-    otherImg.push(document.getElementsByClassName('deep'));
-    otherImg.push(document.getElementsByClassName('butterfly'));
     for (var i=0; i<otherImg.length; i++) {
       for (var j=0; j<otherImg[i].length; j++) {
         var displaySetting = otherImg[i][j].style.opacity;
@@ -116,35 +31,35 @@ export default class Projects extends Component {
         <section id="project-list">
           <div id="flex">
             <p>
-              <input type="image" class="project-image coquill" src="images/burnt_quill.png" style={{ opacity: 1 }} onClick={ this.coquillClick } />
+              <input type="image" class="project-image coquill" src="images/burnt_quill.png" style={{ opacity: 1 }} focus={ "coquill" } others={ ['meltdown', 'deep', 'butterfly', 'award'] } onClick={ () => this.click("coquill", ['meltdown', 'deep', 'butterfly', 'award'],) } />
               <text class="project-name coquill" style={{ opacity: 0 }}>
                 <b>COQUILL</b>
               </text>
             </p>
 
             <p>
-              <input type="image" className="project-image meltdown" src="images/finalmeltdown.png" style={{ opacity: 1 }} onClick={ this.meltdownClick } />
+              <input type="image" className="project-image meltdown" src="images/finalmeltdown.png" style={{ opacity: 1 }} focus={ "meltdown" } others={ ['coquill', 'deep', 'butterfly', 'award'] } onClick={ () => this.click("meltdown", ['coquill', 'deep', 'butterfly', 'award'],) } />
               <text className="project-name meltdown" style={{ opacity: 0 }}>
                 <b>FINAL MELTDOWN</b>
               </text>
             </p>
 
              <p>
-              <input type="image" className="project-image deep" src="images/whale.png" style={{ opacity: 1 }} onClick={ this.deepClick } />
+              <input type="image" className="project-image deep" src="images/whale.png" style={{ opacity: 1 }} focus={ "deep" } others={ ['coquill', 'meltdown', 'butterfly', 'award'] } onClick={ () => this.click("deep", ['coquill', 'meltdown', 'butterfly', 'award'],) } />
               <text className="project-name deep" style={{ opacity: 0 }}>
                 <b>HACK THE DEEP</b>
               </text>
             </p>
             
             <p>
-              <input type="image" className="project-image butterfly" src="images/butterfly.png" style={{ opacity: 1 }} onClick={ this.butterflyClick } /> 
+              <input type="image" className="project-image butterfly" src="images/butterfly.png" style={{ opacity: 1 }} focus={ "butterfly" } others={ ['coquill', 'meltdown', 'deep', 'award'] } onClick={ () => this.click("butterfly", ['coquill', 'meltdown', 'deep', 'award'],) } /> 
               <text className="project-name butterfly" style={{ opacity: 0 }}>
                 <b>BUTTERFLY HUNT</b>
               </text>
             </p>
 
             <p>
-              <input type="image" className="project-image award" src="images/award.png" style={{ opacity: 1 }} onClick={ this.awardClick } />
+              <input type="image" className="project-image award" src="images/award.png" style={{ opacity: 1 }} focus={ "award" } others={ ['coquill', 'meltdown', 'butterfly', 'deep'] } onClick={ () => this.click("award", ['coquill', 'meltdown', 'butterfly', 'deep'],) } />
               <text className="project-name award" style={{ opacity: 0 }}>
                 <b>AWARDS</b>
               </text>
@@ -168,6 +83,7 @@ export default class Projects extends Component {
 
             <p class="project-text deep" style={{ opacity: 0, zIndex: -1}}>
               A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.<br /><br />
+              I attended Hack the Deep, the American Museum of Natural History's yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. <br /><br />
               <b style={{ fontSize: 12 }}>HTML Python Pandas CartoJS</b><br /><br />
               <a href="https://hackthedeep.github.io/flotsam-and-jetsam"><button class="button">try me</button></a>
             </p>

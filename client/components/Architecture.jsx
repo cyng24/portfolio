@@ -25,10 +25,10 @@ export default class Architecture extends Component {
     return (
       <graphics>
         <section id="design-list">
+            <Link id="christinalinks" to="/christina/the-photographer">photography</Link>
+            <Link id="christinalinks" to="/christina/the-graphicdesigner">graphics</Link>
             <Link id="christinalinks" to="/christina/the-architect">architecture</Link>
             <Link id="christinalinks" to="/christina/the-setdesigner">film and stage</Link>
-            <Link id="christinalinks" to="/christina/the-graphicdesigner">graphics</Link>
-            <Link id="christinalinks" to="/christina/the-photographer">photography</Link>
         </section>
 
         <section id="christina-list">

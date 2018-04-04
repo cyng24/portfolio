@@ -7,10 +7,10 @@ export default class Christina extends Component {
     return (
       <christina>
         <section id="design-list">
+            <Link id="christinalinks" to="/christina/the-photographer">photography</Link>
+            <Link id="christinalinks" to="/christina/the-graphicdesigner">graphics</Link>
             <Link id="christinalinks" to="/christina/the-architect">architecture</Link>
             <Link id="christinalinks" to="/christina/the-setdesigner">film and stage</Link>
-            <Link id="christinalinks" to="/christina/the-graphicdesigner">graphics</Link>
-            <Link id="christinalinks" to="/christina/the-photographer">photography</Link>
         </section>
       </christina>
     );

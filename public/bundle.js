@@ -25791,9 +25791,9 @@ var Projects = function (_Component) {
   }
 
   _createClass(Projects, [{
-    key: 'coquillClick',
-    value: function coquillClick() {
-      var myImg = document.getElementsByClassName('coquill');
+    key: 'click',
+    value: function click(focus, others) {
+      var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
@@ -25809,150 +25809,10 @@ var Projects = function (_Component) {
           myImg[i].style.opacity = 1;
         }
       }
-      var otherImg = [document.getElementsByClassName('meltdown')];
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
       }
-    }
-  }, {
-    key: 'meltdownClick',
-    value: function meltdownClick() {
-      var myImg = document.getElementsByClassName('meltdown');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'deepClick',
-    value: function deepClick() {
-      var myImg = document.getElementsByClassName('deep');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'butterflyClick',
-    value: function butterflyClick() {
-      var myImg = document.getElementsByClassName('butterfly');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'awardClick',
-    value: function awardClick() {
-      var myImg = document.getElementsByClassName('award');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
@@ -25968,6 +25828,8 @@ var Projects = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'projects',
         null,
@@ -25980,7 +25842,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', 'class': 'project-image coquill', src: 'images/burnt_quill.png', style: { opacity: 1 }, onClick: this.coquillClick }),
+              _react2.default.createElement('input', { type: 'image', 'class': 'project-image coquill', src: 'images/burnt_quill.png', style: { opacity: 1 }, focus: "coquill", others: ['meltdown', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("coquill", ['meltdown', 'deep', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { 'class': 'project-name coquill', style: { opacity: 0 } },
@@ -25994,7 +25858,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image meltdown', src: 'images/finalmeltdown.png', style: { opacity: 1 }, onClick: this.meltdownClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image meltdown', src: 'images/finalmeltdown.png', style: { opacity: 1 }, focus: "meltdown", others: ['coquill', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("meltdown", ['coquill', 'deep', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name meltdown', style: { opacity: 0 } },
@@ -26008,7 +25874,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image deep', src: 'images/whale.png', style: { opacity: 1 }, onClick: this.deepClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image deep', src: 'images/whale.png', style: { opacity: 1 }, focus: "deep", others: ['coquill', 'meltdown', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("deep", ['coquill', 'meltdown', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name deep', style: { opacity: 0 } },
@@ -26022,7 +25890,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image butterfly', src: 'images/butterfly.png', style: { opacity: 1 }, onClick: this.butterflyClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image butterfly', src: 'images/butterfly.png', style: { opacity: 1 }, focus: "butterfly", others: ['coquill', 'meltdown', 'deep', 'award'], onClick: function onClick() {
+                  return _this2.click("butterfly", ['coquill', 'meltdown', 'deep', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name butterfly', style: { opacity: 0 } },
@@ -26036,7 +25906,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image award', src: 'images/award.png', style: { opacity: 1 }, onClick: this.awardClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image award', src: 'images/award.png', style: { opacity: 1 }, focus: "award", others: ['coquill', 'meltdown', 'butterfly', 'deep'], onClick: function onClick() {
+                  return _this2.click("award", ['coquill', 'meltdown', 'butterfly', 'deep']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name award', style: { opacity: 0 } },
@@ -26107,6 +25979,9 @@ var Projects = function (_Component) {
               'p',
               { 'class': 'project-text deep', style: { opacity: 0, zIndex: -1 } },
               'A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.',
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              'I attended Hack the Deep, the American Museum of Natural History\'s yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. ',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
@@ -26274,13 +26149,8 @@ var Christina = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-architect' },
-            'architecture'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-setdesigner' },
-            'film and stage'
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -26289,8 +26159,13 @@ var Christina = function (_Component) {
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-photographer' },
-            'photography'
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
           )
         )
       );
@@ -26377,13 +26252,8 @@ var Graphics = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-architect' },
-            'architecture'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-setdesigner' },
-            'film and stage'
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -26392,8 +26262,13 @@ var Graphics = function (_Component) {
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-photographer' },
-            'photography'
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
           )
         ),
         _react2.default.createElement(
@@ -26526,13 +26401,8 @@ var Photography = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-architect' },
-            'architecture'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-setdesigner' },
-            'film and stage'
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -26541,8 +26411,13 @@ var Photography = function (_Component) {
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-photographer' },
-            'photography'
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
           )
         ),
         _react2.default.createElement(
@@ -26697,13 +26572,8 @@ var Architecture = function (_Component) {
           { id: 'design-list' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-architect' },
-            'architecture'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-setdesigner' },
-            'film and stage'
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -26712,8 +26582,13 @@ var Architecture = function (_Component) {
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-photographer' },
-            'photography'
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
           )
         ),
         _react2.default.createElement(
@@ -26813,11 +26688,11 @@ var Filmstage = function (_Component) {
       var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
-        if (displaySetting == "22px") {
+        if (displaySetting == "15px") {
           myImg[i].style.width = expandSize;
         }
         if (displaySetting == expandSize) {
-          myImg[i].style.width = "22px";
+          myImg[i].style.width = "15px";
         }
       }
       var otherImg = [];
@@ -26827,8 +26702,8 @@ var Filmstage = function (_Component) {
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "22px") {
-            otherImg[i][j].style.width = "22px";
+          if (displaySetting != "15px") {
+            otherImg[i][j].style.width = "15px";
           }
         }
       }
@@ -26836,12 +26711,24 @@ var Filmstage = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'graphics',
         null,
         _react2.default.createElement(
           'section',
           { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
           _react2.default.createElement(
             _reactRouterDom.Link,
             { id: 'christinalinks', to: '/christina/the-architect' },
@@ -26851,19 +26738,26 @@ var Filmstage = function (_Component) {
             _reactRouterDom.Link,
             { id: 'christinalinks', to: '/christina/the-setdesigner' },
             'film and stage'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
-            'graphics'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { id: 'christinalinks', to: '/christina/the-photographer' },
-            'photography'
           )
         ),
-        _react2.default.createElement('section', { id: 'christina-list' })
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box frida', style: { width: 15 }, focus: "frida", others: ['cuckoo'], expandSize: "665px", onClick: function onClick() {
+                return _this2.click("frida", ['cuckoo'], "665px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/frida2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box cuckoo', style: { width: 15 }, focus: "cuckoo", others: ['frida'], expandSize: "735px", onClick: function onClick() {
+                return _this2.click("cuckoo", ['frida'], "735px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/cuckoo1.jpg' })
+          )
+        )
       );
     }
   }]);
