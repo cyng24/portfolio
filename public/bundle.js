@@ -26219,11 +26219,11 @@ var Graphics = function (_Component) {
       var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
-        if (displaySetting == "22px") {
+        if (displaySetting == "2%") {
           myImg[i].style.width = expandSize;
         }
         if (displaySetting == expandSize) {
-          myImg[i].style.width = "22px";
+          myImg[i].style.width = "2%";
         }
       }
       var otherImg = [];
@@ -26233,8 +26233,8 @@ var Graphics = function (_Component) {
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "22px") {
-            otherImg[i][j].style.width = "22px";
+          if (displaySetting != "2%") {
+            otherImg[i][j].style.width = "2%";
           }
         }
       }
@@ -26276,43 +26276,43 @@ var Graphics = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical whale', style: { width: 22 }, focus: "whale", others: ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "245px", onClick: function onClick() {
-                return _this2.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "245px");
+            { 'class': 'box vertical whale', style: { width: "2%" }, focus: "whale", others: ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/junk_whale.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical lib', style: { width: 22 }, focus: "lib", others: ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "355px", onClick: function onClick() {
-                return _this2.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "355px");
+            { 'class': 'box vertical lib', style: { width: "2%" }, focus: "lib", others: ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/lib_elec.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical evidence', style: { width: 22 }, focus: "evidence", others: ['whale', 'lib', 'ashes', 'fiji', 'tonga'], expandSize: "240px", onClick: function onClick() {
-                return _this2.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "240px");
+            { 'class': 'box vertical evidence', style: { width: "2%" }, focus: "evidence", others: ['whale', 'lib', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/evidence.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal ashes', style: { width: 22 }, focus: "ashes", others: ['whale', 'lib', 'evidence', 'fiji', 'tonga'], expandSize: "507px", onClick: function onClick() {
-                return _this2.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "507px");
+            { 'class': 'box horizontal ashes', style: { width: "2%" }, focus: "ashes", others: ['whale', 'lib', 'evidence', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "65%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/ashes.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical fiji', style: { width: 22 }, focus: "fiji", others: ['whale', 'lib', 'evidence', 'ashes', 'tonga'], expandSize: "250px", onClick: function onClick() {
-                return _this2.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "250px");
+            { 'class': 'box vertical fiji', style: { width: "2%" }, focus: "fiji", others: ['whale', 'lib', 'evidence', 'ashes', 'tonga'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/fiji.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical tonga', style: { width: 22 }, focus: "tonga", others: ['whale', 'lib', 'evidence', 'ashes', 'fiji'], expandSize: "250px", onClick: function onClick() {
-                return _this2.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "250px");
+            { 'class': 'box vertical tonga', style: { width: "2%" }, focus: "tonga", others: ['whale', 'lib', 'evidence', 'ashes', 'fiji'], expandSize: "45%", onClick: function onClick() {
+                return _this2.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/tonga.jpg' })
           )
@@ -26368,11 +26368,11 @@ var Photography = function (_Component) {
       var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
-        if (displaySetting == "19px") {
+        if (displaySetting == "2%") {
           myImg[i].style.width = expandSize;
         }
         if (displaySetting == expandSize) {
-          myImg[i].style.width = "19px";
+          myImg[i].style.width = "2%";
         }
       }
       var otherImg = [];
@@ -26382,8 +26382,8 @@ var Photography = function (_Component) {
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "19px") {
-            otherImg[i][j].style.width = "19px";
+          if (displaySetting != "2%") {
+            otherImg[i][j].style.width = "2%";
           }
         }
       }
@@ -26425,64 +26425,64 @@ var Photography = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY1', style: { width: 19 }, focus: 'NY1', others: ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "285px", onClick: function onClick() {
-                return _this2.click('NY1', ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "285px");
+            { 'class': 'box vertical NY1', style: { width: "2%" }, focus: 'NY1', others: ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('NY1', ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY2', style: { width: 19 }, focus: 'NY2', others: ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "285px", onClick: function onClick() {
-                return _this2.click('NY2', ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "285px");
+            { 'class': 'box vertical NY2', style: { width: "2%" }, focus: 'NY2', others: ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('NY2', ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY3', style: { width: 19 }, focus: 'NY3', others: ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "370px", onClick: function onClick() {
-                return _this2.click('NY3', ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "370px");
+            { 'class': 'box vertical NY3', style: { width: "2%" }, focus: 'NY3', others: ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('NY3', ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-3.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY4', style: { width: 19 }, focus: 'NY4', others: ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "370px", onClick: function onClick() {
-                return _this2.click('NY4', ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "370px");
+            { 'class': 'box vertical NY4', style: { width: "2%" }, focus: 'NY4', others: ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('NY4', ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-4.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal NY5', style: { width: 19 }, focus: 'NY5', others: ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "500px", onClick: function onClick() {
-                return _this2.click('NY5', ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], "500px");
+            { 'class': 'box horizontal NY5', style: { width: "2%" }, focus: 'NY5', others: ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('NY5', ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-5.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH1', style: { width: 19 }, focus: 'CH1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], expandSize: "565px", onClick: function onClick() {
-                return _this2.click('CH1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], "565px");
+            { 'class': 'box horizontal CH1', style: { width: "2%" }, focus: 'CH1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('CH1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH2', style: { width: 19 }, focus: 'CH2', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], expandSize: "565px", onClick: function onClick() {
-                return _this2.click('CH2', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], "565px");
+            { 'class': 'box horizontal CH2', style: { width: "2%" }, focus: 'CH2', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('CH2', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal BA1', style: { width: 19 }, focus: 'BA1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], expandSize: "470px", onClick: function onClick() {
-                return _this2.click('BA1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], "470px");
+            { 'class': 'box horizontal BA1', style: { width: "2%" }, focus: 'BA1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('BA1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/BA-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CP1', style: { width: 19 }, focus: 'CP1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], expandSize: "550px", onClick: function onClick() {
-                return _this2.click('CP1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], "550px");
+            { 'class': 'box horizontal CP1', style: { width: "2%" }, focus: 'CP1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], expandSize: "68%", onClick: function onClick() {
+                return _this2.click('CP1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CP-1.jpg' })
           )
@@ -26688,11 +26688,11 @@ var Filmstage = function (_Component) {
       var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
-        if (displaySetting == "15px") {
+        if (displaySetting == "2%") {
           myImg[i].style.width = expandSize;
         }
         if (displaySetting == expandSize) {
-          myImg[i].style.width = "15px";
+          myImg[i].style.width = "2%";
         }
       }
       var otherImg = [];
@@ -26702,8 +26702,8 @@ var Filmstage = function (_Component) {
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "15px") {
-            otherImg[i][j].style.width = "15px";
+          if (displaySetting != "2%") {
+            otherImg[i][j].style.width = "2%";
           }
         }
       }
@@ -26745,15 +26745,15 @@ var Filmstage = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box frida', style: { width: 15 }, focus: "frida", others: ['cuckoo'], expandSize: "665px", onClick: function onClick() {
-                return _this2.click("frida", ['cuckoo'], "665px");
+            { 'class': 'box frida', style: { width: "2%" }, focus: "frida", others: ['cuckoo'], expandSize: "80%", onClick: function onClick() {
+                return _this2.click("frida", ['cuckoo'], "80%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/frida2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box cuckoo', style: { width: 15 }, focus: "cuckoo", others: ['frida'], expandSize: "735px", onClick: function onClick() {
-                return _this2.click("cuckoo", ['frida'], "735px");
+            { 'class': 'box cuckoo', style: { width: "2%" }, focus: "cuckoo", others: ['frida'], expandSize: "95%", onClick: function onClick() {
+                return _this2.click("cuckoo", ['frida'], "95%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/cuckoo1.jpg' })
           )

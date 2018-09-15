@@ -7,8 +7,8 @@ export default class Graphics extends Component {
     var myImg = document.getElementsByClassName(focus);
     for (var i=0; i<myImg.length; i++) {
       var displaySetting = myImg[i].style.width;
-      if(displaySetting == "22px") { myImg[i].style.width = expandSize; }
-      if(displaySetting == expandSize) { myImg[i].style.width = "22px"; }
+      if(displaySetting == "2%") { myImg[i].style.width = expandSize; }
+      if(displaySetting == expandSize) { myImg[i].style.width = "2%"; }
     }
     var otherImg = [];
     for (var i=0; i<others.length; i++) {
@@ -17,7 +17,7 @@ export default class Graphics extends Component {
     for (var i=0; i<otherImg.length; i++) {
       for (var j=0; j<otherImg[i].length; j++) {
         var displaySetting = otherImg[i][j].style.width;
-        if (displaySetting != "22px") { otherImg[i][j].style.width = "22px"; }
+        if (displaySetting != "2%") { otherImg[i][j].style.width = "2%"; }
       }
     }
   }
@@ -33,22 +33,22 @@ export default class Graphics extends Component {
         </section>
 
         <section id="christina-list">
-          <div class="box vertical whale" style={{ width: 22 }} focus={ "whale" } others={ ['lib', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "245px" } onClick={ () => this.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "245px") } >
+          <div class="box vertical whale" style={{ width: "2%" }} focus={ "whale" } others={ ['lib', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "45%") } >
             <img class="christina-item" src="graphics/junk_whale.jpg" />
           </div>
-          <div class="box vertical lib" style={{ width: 22 }} focus={ "lib" } others={ ['whale', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "355px" } onClick={ () => this.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "355px") } >
+          <div class="box vertical lib" style={{ width: "2%" }} focus={ "lib" } others={ ['whale', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "45%") } >
             <img class="christina-item" src="graphics/lib_elec.jpg" />
           </div>
-          <div class="box vertical evidence" style={{ width: 22 }} focus={ "evidence" } others={ ['whale', 'lib', 'ashes', 'fiji', 'tonga'] } expandSize={ "240px" } onClick={ () => this.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "240px") }>
+          <div class="box vertical evidence" style={{ width: "2%" }} focus={ "evidence" } others={ ['whale', 'lib', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "45%") }>
             <img class="christina-item" src="graphics/evidence.jpg" />
           </div>
-          <div class="box horizontal ashes" style={{ width: 22 }} focus={ "ashes" } others={ ['whale', 'lib', 'evidence', 'fiji', 'tonga'] } expandSize={ "507px" } onClick={ () => this.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "507px") }>
+          <div class="box horizontal ashes" style={{ width: "2%" }} focus={ "ashes" } others={ ['whale', 'lib', 'evidence', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "65%") }>
             <img class="christina-item" src="graphics/ashes.jpg" />
           </div>
-          <div class="box vertical fiji" style={{ width: 22 }} focus={ "fiji" } others={ ['whale', 'lib', 'evidence', 'ashes', 'tonga'] } expandSize={ "250px" } onClick={ () => this.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "250px") }>
+          <div class="box vertical fiji" style={{ width: "2%" }} focus={ "fiji" } others={ ['whale', 'lib', 'evidence', 'ashes', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "45%") }>
             <img class="christina-item" src="graphics/fiji.jpg" />
           </div>
-          <div class="box vertical tonga" style={{ width: 22 }} focus={ "tonga" } others={ ['whale', 'lib', 'evidence', 'ashes', 'fiji'] } expandSize={ "250px" } onClick={ () => this.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "250px") }>
+          <div class="box vertical tonga" style={{ width: "2%" }} focus={ "tonga" } others={ ['whale', 'lib', 'evidence', 'ashes', 'fiji'] } expandSize={ "45%" } onClick={ () => this.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "45%") }>
             <img class="christina-item" src="graphics/tonga.jpg" />
           </div>
         </section>
