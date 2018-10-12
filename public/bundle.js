@@ -26388,7 +26388,7 @@ var Photography = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var photoArray = ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'];
+      var photoArray = ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1', 'PA1', 'PA2', 'PA3'];
 
       return _react2.default.createElement(
         'photography',
@@ -26422,66 +26422,87 @@ var Photography = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY1', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box NY1', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(0, photoArray, "36%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY2', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box NY2', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(1, photoArray, "36%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY3', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box NY3', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(2, photoArray, "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-3.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY4', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box NY4', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(3, photoArray, "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-4.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal NY5', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box NY5', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(4, photoArray, "60%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-5.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH1', style: { width: "2%" }, onClick: function onClick() {
-                return _this2.click(5, photoArray, "67%");
+            { 'class': 'box CH1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(5, photoArray, "65%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH2', style: { width: "2%" }, onClick: function onClick() {
-                return _this2.click(6, photoArray, "67%");
+            { 'class': 'box CH2', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(6, photoArray, "65%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal BA1', style: { width: "2%" }, onClick: function onClick() {
+            { 'class': 'box BA1', style: { width: "2%" }, onClick: function onClick() {
                 return _this2.click(7, photoArray, "56%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/BA-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CP1', style: { width: "2%" }, onClick: function onClick() {
-                return _this2.click(8, photoArray, "68%");
+            { 'class': 'box CP1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(8, photoArray, "65%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CP-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box PA1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(9, photoArray, "30%");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/PA-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box PA2', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(10, photoArray, "65%");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/PA-2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box PA3', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(11, photoArray, "30%");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/PA-3.jpg' })
           )
         )
       );
