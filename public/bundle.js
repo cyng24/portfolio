@@ -432,6 +432,48 @@ module.exports = invariant;
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -488,48 +530,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
 
 /***/ }),
 /* 7 */
@@ -865,7 +865,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1703,7 +1703,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -3377,7 +3377,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(7),n=__webpack_require__(11),p=__webpack_require__(6),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(7),n=__webpack_require__(11),p=__webpack_require__(5),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -3417,7 +3417,7 @@ var _assign = __webpack_require__(7);
 var emptyObject = __webpack_require__(11);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(14);
 
 // TODO: this is special because it gets imported during build.
@@ -4819,7 +4819,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(24),B=__webpack_require__(7),C=__webpack_require__(6),ba=__webpack_require__(25),da=__webpack_require__(26),ea=__webpack_require__(27),fa=__webpack_require__(28),ia=__webpack_require__(29),D=__webpack_require__(11);
+var aa=__webpack_require__(0),l=__webpack_require__(24),B=__webpack_require__(7),C=__webpack_require__(5),ba=__webpack_require__(25),da=__webpack_require__(26),ea=__webpack_require__(27),fa=__webpack_require__(28),ia=__webpack_require__(29),D=__webpack_require__(11);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -5121,7 +5121,7 @@ var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var ExecutionEnvironment = __webpack_require__(24);
 var _assign = __webpack_require__(7);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 var EventListener = __webpack_require__(25);
 var getActiveElement = __webpack_require__(26);
 var shallowEqual = __webpack_require__(27);
@@ -20771,7 +20771,7 @@ function createProvider() {
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var assign = __webpack_require__(7);
@@ -21321,7 +21321,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(8);
 var ReactPropTypesSecret = __webpack_require__(15);
 
@@ -22496,7 +22496,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 var _Sidebar = __webpack_require__(113);
 
@@ -25547,7 +25547,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25632,7 +25632,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25688,8 +25688,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25708,41 +25706,38 @@ var About = function (_Component) {
   }
 
   _createClass(About, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'about',
+        "about",
         null,
         _react2.default.createElement(
-          'p',
+          "p",
           null,
-          _react2.default.createElement('img', { className: 'about-image', src: 'images/marfa.png' }),
-          _react2.default.createElement('img', { className: 'about-image2', src: 'images/marfa.png' }),
-          _react2.default.createElement('img', { className: 'about-image3', src: 'images/marfa.png' }),
-          _react2.default.createElement('img', { className: 'about-image4', src: 'images/marfa.png' })
+          _react2.default.createElement("img", { className: "about-image", src: "images/random.jpg" })
         ),
         _react2.default.createElement(
-          'p',
+          "p",
           null,
-          'I\'m a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media.'
+          "I'm a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media."
         ),
         _react2.default.createElement(
-          'p',
+          "p",
           null,
-          'I\'ve participated in a wide array of hackathons focused on subjects ranging from net neutrality to oceanography. I\'ve created projects for mesh networks and VR headsets. With the growth and development of new products and platforms, I\u2019ll never run out of things to learn.'
+          "I've participated in a wide array of hackathons focused on subjects ranging from net neutrality to oceanography. I've created projects for mesh networks and VR headsets. With the growth and development of new products and platforms, I\u2019ll never run out of things to learn."
         ),
         _react2.default.createElement(
-          'p',
+          "p",
           null,
           _react2.default.createElement(
-            'a',
-            { href: 'https://www.github.com/cyng24' },
-            _react2.default.createElement('img', { className: 'link-image', src: 'images/github.png' })
+            "a",
+            { href: "https://www.github.com/cyng24" },
+            _react2.default.createElement("img", { className: "link-image", src: "images/github.png" })
           ),
           _react2.default.createElement(
-            'a',
-            { href: 'https://www.linkedin.com/in/cyng24' },
-            _react2.default.createElement('img', { className: 'link-image', src: 'images/linkedin.png' })
+            "a",
+            { href: "https://www.linkedin.com/in/cyng24" },
+            _react2.default.createElement("img", { className: "link-image", src: "images/linkedin.png" })
           )
         )
       );
@@ -25771,8 +25766,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25780,6 +25773,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import { Link } from 'react-router-dom';
 
 var Projects = function (_Component) {
   _inherits(Projects, _Component);
@@ -25791,7 +25786,7 @@ var Projects = function (_Component) {
   }
 
   _createClass(Projects, [{
-    key: 'click',
+    key: "click",
     value: function click(focus, others) {
       var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
@@ -25826,217 +25821,213 @@ var Projects = function (_Component) {
       }
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var _this2 = this;
 
       return _react2.default.createElement(
-        'projects',
+        "projects",
         null,
         _react2.default.createElement(
-          'section',
-          { id: 'project-list' },
+          "section",
+          { id: "project-list" },
           _react2.default.createElement(
-            'div',
-            { id: 'flex' },
+            "div",
+            { id: "flex" },
             _react2.default.createElement(
-              'p',
+              "p",
               null,
-              _react2.default.createElement('input', { type: 'image', 'class': 'project-image coquill', src: 'images/burnt_quill.png', style: { opacity: 1 }, focus: "coquill", others: ['meltdown', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+              _react2.default.createElement("input", { type: "image", "class": "project-image coquill", src: "images/burnt_quill.png", style: { opacity: 1 }, focus: "coquill", others: ['meltdown', 'deep', 'butterfly', 'award'], onClick: function onClick() {
                   return _this2.click("coquill", ['meltdown', 'deep', 'butterfly', 'award']);
                 } }),
               _react2.default.createElement(
-                'text',
-                { 'class': 'project-name coquill', style: { opacity: 0 } },
+                "text",
+                { "class": "project-name coquill", style: { opacity: 0 } },
                 _react2.default.createElement(
-                  'b',
+                  "b",
                   null,
-                  'COQUILL'
+                  "COQUILL"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
+              "p",
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image meltdown', src: 'images/finalmeltdown.png', style: { opacity: 1 }, focus: "meltdown", others: ['coquill', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+              _react2.default.createElement("input", { type: "image", className: "project-image meltdown", src: "images/finalmeltdown.png", style: { opacity: 1 }, focus: "meltdown", others: ['coquill', 'deep', 'butterfly', 'award'], onClick: function onClick() {
                   return _this2.click("meltdown", ['coquill', 'deep', 'butterfly', 'award']);
                 } }),
               _react2.default.createElement(
-                'text',
-                { className: 'project-name meltdown', style: { opacity: 0 } },
+                "text",
+                { className: "project-name meltdown", style: { opacity: 0 } },
                 _react2.default.createElement(
-                  'b',
+                  "b",
                   null,
-                  'FINAL MELTDOWN'
+                  "FINAL MELTDOWN"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
+              "p",
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image deep', src: 'images/whale.png', style: { opacity: 1 }, focus: "deep", others: ['coquill', 'meltdown', 'butterfly', 'award'], onClick: function onClick() {
+              _react2.default.createElement("input", { type: "image", className: "project-image deep", src: "images/whale.png", style: { opacity: 1 }, focus: "deep", others: ['coquill', 'meltdown', 'butterfly', 'award'], onClick: function onClick() {
                   return _this2.click("deep", ['coquill', 'meltdown', 'butterfly', 'award']);
                 } }),
               _react2.default.createElement(
-                'text',
-                { className: 'project-name deep', style: { opacity: 0 } },
+                "text",
+                { className: "project-name deep", style: { opacity: 0 } },
                 _react2.default.createElement(
-                  'b',
+                  "b",
                   null,
-                  'HACK THE DEEP'
+                  "HACK THE DEEP"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
+              "p",
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image butterfly', src: 'images/butterfly.png', style: { opacity: 1 }, focus: "butterfly", others: ['coquill', 'meltdown', 'deep', 'award'], onClick: function onClick() {
+              _react2.default.createElement("input", { type: "image", className: "project-image butterfly", src: "images/butterfly.png", style: { opacity: 1 }, focus: "butterfly", others: ['coquill', 'meltdown', 'deep', 'award'], onClick: function onClick() {
                   return _this2.click("butterfly", ['coquill', 'meltdown', 'deep', 'award']);
                 } }),
               _react2.default.createElement(
-                'text',
-                { className: 'project-name butterfly', style: { opacity: 0 } },
+                "text",
+                { className: "project-name butterfly", style: { opacity: 0 } },
                 _react2.default.createElement(
-                  'b',
+                  "b",
                   null,
-                  'BUTTERFLY HUNT'
+                  "BUTTERFLY HUNT"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
+              "p",
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image award', src: 'images/award.png', style: { opacity: 1 }, focus: "award", others: ['coquill', 'meltdown', 'butterfly', 'deep'], onClick: function onClick() {
+              _react2.default.createElement("input", { type: "image", className: "project-image award", src: "images/award.png", style: { opacity: 1 }, focus: "award", others: ['coquill', 'meltdown', 'butterfly', 'deep'], onClick: function onClick() {
                   return _this2.click("award", ['coquill', 'meltdown', 'butterfly', 'deep']);
                 } }),
               _react2.default.createElement(
-                'text',
-                { className: 'project-name award', style: { opacity: 0 } },
+                "text",
+                { className: "project-name award", style: { opacity: 0 } },
                 _react2.default.createElement(
-                  'b',
+                  "b",
                   null,
-                  'AWARDS'
+                  "AWARDS"
                 )
               )
             )
           ),
           _react2.default.createElement(
-            'div',
+            "div",
             null,
             _react2.default.createElement(
-              'p',
-              { 'class': 'project-text coquill', style: { opacity: 0, zIndex: -1 } },
-              'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              'For my capstone project at the Grace Hopper program, I learned how to use Google Firebase to update data in real-time as well as construct a series of text editors that automatically format to screenplay standards.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              "p",
+              { "class": "project-text coquill", style: { opacity: 0, zIndex: -1 } },
+              "A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
+              "For my capstone project at the Grace Hopper program, I learned how to use Google Firebase to update data in real-time as well as construct a series of text editors that automatically format to screenplay standards.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'b',
+                "b",
                 { style: { fontSize: 12 } },
-                'Javascript CSS HTML Firebase Immutable'
+                "Javascript CSS HTML Firebase Immutable"
               ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'a',
-                { href: 'https://coquill-e559a.firebaseapp.com/' },
+                "a",
+                { href: "https://coquill-e559a.firebaseapp.com/" },
                 _react2.default.createElement(
-                  'button',
-                  { 'class': 'button' },
-                  'try me'
+                  "button",
+                  { "class": "button" },
+                  "try me"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
-              { 'class': 'project-text meltdown', style: { opacity: 0, zIndex: -1 } },
-              'A virtual reality app that depicts the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              'I attended SheHacks Boston, where I learned A-Frame and Glitch, and developed a platform for the Samsung Gear VR over the course of 48 hours. Out of a 100 teams, ours won Best Open Source Project.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              "p",
+              { "class": "project-text meltdown", style: { opacity: 0, zIndex: -1 } },
+              "A virtual reality app that depicts the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
+              "I attended SheHacks Boston, where I learned A-Frame and Glitch, and developed a platform for the Samsung Gear VR over the course of 48 hours. Out of a 100 teams, ours won Best Open Source Project.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'b',
+                "b",
                 { style: { fontSize: 12 } },
-                'Javascript HTML A-Frame Glitch Samsung Gear VR'
+                "Javascript HTML A-Frame Glitch Samsung Gear VR"
               ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'a',
-                { href: 'https://thefinalmeltdown.glitch.me/' },
+                "a",
+                { href: "https://thefinalmeltdown.glitch.me/" },
                 _react2.default.createElement(
-                  'button',
-                  { 'class': 'button' },
-                  'try me'
+                  "button",
+                  { "class": "button" },
+                  "try me"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
-              { 'class': 'project-text deep', style: { opacity: 0, zIndex: -1 } },
-              'A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              'I attended Hack the Deep, the American Museum of Natural History\'s yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. ',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              "p",
+              { "class": "project-text deep", style: { opacity: 0, zIndex: -1 } },
+              "A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
+              "I attended Hack the Deep, the American Museum of Natural History's yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. ",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'b',
+                "b",
                 { style: { fontSize: 12 } },
-                'HTML Python Pandas CartoJS'
+                "HTML Python Pandas CartoJS"
               ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'a',
-                { href: 'https://hackthedeep.github.io/flotsam-and-jetsam' },
+                "button",
+                { "class": "button-construction" },
+                "try me"
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              { "class": "project-text butterfly", style: { opacity: 0, zIndex: -1 } },
+              "A mobile augmented reality game where Grace Hopper students search for butterflies that appear on the the GH logo.",
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "b",
+                { style: { fontSize: 12 } },
+                "Unity C# Vuforia Android Studio"
+              ),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "a",
+                { href: "https://www.youtube.com/watch?v=Y9MLgQTFiHk" },
                 _react2.default.createElement(
-                  'button',
-                  { 'class': 'button' },
-                  'try me'
+                  "button",
+                  { "class": "button" },
+                  "try me"
                 )
               )
             ),
             _react2.default.createElement(
-              'p',
-              { 'class': 'project-text butterfly', style: { opacity: 0, zIndex: -1 } },
-              'A mobile augmented reality game where Grace Hopper students search for butterflies that appear on the the GH logo.',
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              "p",
+              { "class": "project-text award", style: { opacity: 0, zIndex: -1 } },
               _react2.default.createElement(
-                'b',
-                { style: { fontSize: 12 } },
-                'Unity C# Vuforia Android Studio'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://www.youtube.com/watch?v=Y9MLgQTFiHk' },
-                _react2.default.createElement(
-                  'button',
-                  { 'class': 'button' },
-                  'try me'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'p',
-              { 'class': 'project-text award', style: { opacity: 0, zIndex: -1 } },
-              _react2.default.createElement(
-                'b',
+                "b",
                 null,
-                'Red Hat Best Open Source Project'
+                "Red Hat Best Open Source Project"
               ),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement("br", null),
               _react2.default.createElement(
-                'i',
+                "i",
                 null,
-                'SheHacks Boston'
+                "SheHacks Boston"
               )
             )
           )
@@ -26067,8 +26058,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26087,12 +26076,12 @@ var Resume = function (_Component) {
   }
 
   _createClass(Resume, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'resume',
+        "resume",
         null,
-        _react2.default.createElement('img', { className: 'resume-image', src: 'images/resume.png' })
+        _react2.default.createElement("img", { className: "resume-image", src: "images/resume.png" })
       );
     }
   }]);
@@ -26119,7 +26108,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26194,7 +26183,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26216,7 +26205,7 @@ var Graphics = function (_Component) {
   _createClass(Graphics, [{
     key: 'click',
     value: function click(focus, others, expandSize) {
-      var myImg = document.getElementsByClassName(focus);
+      var myImg = document.getElementsByClassName(others[focus]);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
         if (displaySetting == "2%") {
@@ -26228,7 +26217,9 @@ var Graphics = function (_Component) {
       }
       var otherImg = [];
       for (var i = 0; i < others.length; i++) {
-        otherImg.push(document.getElementsByClassName(others[i]));
+        if (i != focus) {
+          otherImg.push(document.getElementsByClassName(others[i]));
+        }
       }
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
@@ -26243,6 +26234,8 @@ var Graphics = function (_Component) {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      var graphicsArray = ['whale', 'lib', 'evidence', 'ashes', 'fiji', 'tonga'];
 
       return _react2.default.createElement(
         'graphics',
@@ -26276,43 +26269,43 @@ var Graphics = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical whale', style: { width: "2%" }, focus: "whale", others: ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "45%");
+            { 'class': 'box vertical whale', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(0, graphicsArray, "29%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/junk_whale.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical lib', style: { width: "2%" }, focus: "lib", others: ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "45%");
+            { 'class': 'box vertical lib', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(1, graphicsArray, "42.5%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/lib_elec.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical evidence', style: { width: "2%" }, focus: "evidence", others: ['whale', 'lib', 'ashes', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "45%");
+            { 'class': 'box vertical evidence', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(2, graphicsArray, "29%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/evidence.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal ashes', style: { width: "2%" }, focus: "ashes", others: ['whale', 'lib', 'evidence', 'fiji', 'tonga'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "65%");
+            { 'class': 'box horizontal ashes', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(3, graphicsArray, "61%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/ashes.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical fiji', style: { width: "2%" }, focus: "fiji", others: ['whale', 'lib', 'evidence', 'ashes', 'tonga'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "45%");
+            { 'class': 'box vertical fiji', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(4, graphicsArray, "30%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/fiji.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical tonga', style: { width: "2%" }, focus: "tonga", others: ['whale', 'lib', 'evidence', 'ashes', 'fiji'], expandSize: "45%", onClick: function onClick() {
-                return _this2.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "45%");
+            { 'class': 'box vertical tonga', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(5, graphicsArray, "30%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/tonga.jpg' })
           )
@@ -26343,7 +26336,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26365,7 +26358,7 @@ var Photography = function (_Component) {
   _createClass(Photography, [{
     key: 'click',
     value: function click(focus, others, expandSize) {
-      var myImg = document.getElementsByClassName(focus);
+      var myImg = document.getElementsByClassName(others[focus]);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
         if (displaySetting == "2%") {
@@ -26377,7 +26370,9 @@ var Photography = function (_Component) {
       }
       var otherImg = [];
       for (var i = 0; i < others.length; i++) {
-        otherImg.push(document.getElementsByClassName(others[i]));
+        if (i != focus) {
+          otherImg.push(document.getElementsByClassName(others[i]));
+        }
       }
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
@@ -26392,6 +26387,8 @@ var Photography = function (_Component) {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      var photoArray = ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'];
 
       return _react2.default.createElement(
         'photography',
@@ -26425,64 +26422,64 @@ var Photography = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY1', style: { width: "2%" }, focus: 'NY1', others: ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('NY1', ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box vertical NY1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(0, photoArray, "36%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY2', style: { width: "2%" }, focus: 'NY2', others: ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('NY2', ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box vertical NY2', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(1, photoArray, "36%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY3', style: { width: "2%" }, focus: 'NY3', others: ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('NY3', ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box vertical NY3', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(2, photoArray, "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-3.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box vertical NY4', style: { width: "2%" }, focus: 'NY4', others: ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('NY4', ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box vertical NY4', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(3, photoArray, "45%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-4.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal NY5', style: { width: "2%" }, focus: 'NY5', others: ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('NY5', ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box horizontal NY5', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(4, photoArray, "60%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-5.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH1', style: { width: "2%" }, focus: 'CH1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('CH1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], "68%");
+            { 'class': 'box horizontal CH1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(5, photoArray, "67%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CH2', style: { width: "2%" }, focus: 'CH2', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('CH2', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], "68%");
+            { 'class': 'box horizontal CH2', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(6, photoArray, "67%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal BA1', style: { width: "2%" }, focus: 'BA1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('BA1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], "68%");
+            { 'class': 'box horizontal BA1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(7, photoArray, "56%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/BA-1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box horizontal CP1', style: { width: "2%" }, focus: 'CP1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], expandSize: "68%", onClick: function onClick() {
-                return _this2.click('CP1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], "68%");
+            { 'class': 'box horizontal CP1', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(8, photoArray, "68%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CP-1.jpg' })
           )
@@ -26513,7 +26510,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26535,26 +26532,28 @@ var Architecture = function (_Component) {
   _createClass(Architecture, [{
     key: 'click',
     value: function click(focus, others, expandSizeLeft, expandSizeRight) {
-      var myImg = document.getElementsByClassName(focus);
-      if (myImg[0].style.width == "12px") {
+      var myImg = document.getElementsByClassName(others[focus]);
+      if (myImg[0].style.width == "2%") {
         myImg[0].style.width = expandSizeLeft;
       } else {
-        myImg[0].style.width = "12px";
+        myImg[0].style.width = "2%";
       }
-      if (myImg[1].style.width == "12px") {
+      if (myImg[1].style.width == "2%") {
         myImg[1].style.width = expandSizeRight;
       } else {
-        myImg[1].style.width = "12px";
+        myImg[1].style.width = "2%";
       }
       var otherImg = [];
       for (var i = 0; i < others.length; i++) {
-        otherImg.push(document.getElementsByClassName(others[i]));
+        if (i != focus) {
+          otherImg.push(document.getElementsByClassName(others[i]));
+        }
       }
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.width;
-          if (displaySetting != "12px") {
-            otherImg[i][j].style.width = "12px";
+          if (displaySetting != "2%") {
+            otherImg[i][j].style.width = "2%";
           }
         }
       }
@@ -26563,6 +26562,8 @@ var Architecture = function (_Component) {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      var archArray = ['34H', '41G', '860B'];
 
       return _react2.default.createElement(
         'graphics',
@@ -26596,43 +26597,43 @@ var Architecture = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box 34H', style: { width: 12 }, focus: "34H", others: ['41G', '860B'], expandSizeLeft: "420px", expandSizeRight: "150px", onClick: function onClick() {
-                return _this2.click("34H", ['41G', '860B'], "420px", "150px");
+            { 'class': 'box 34H', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(0, archArray, "50%", "18%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box 34H', style: { width: 12 }, focus: "34H2", others: ['41G', '860B'], expandSizeLeft: "420px", expandSizeRight: "150px", onClick: function onClick() {
-                return _this2.click("34H", ['41G', '860B'], "420px", "150px");
+            { 'class': 'box 34H', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(0, archArray, "50%", "18%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box 41G', style: { width: 12 }, focus: "41G", others: ['34H', '860B'], expandSizeLeft: "365px", expandSizeRight: "355px", onClick: function onClick() {
-                return _this2.click("41G", ['34H', '860B'], "365px", "355px");
+            { 'class': 'box 41G', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(1, archArray, "44%", "42%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/41G1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box 41G', style: { width: 12 }, focus: "41G", others: ['34H', '860B'], expandSizeLeft: "365px", expandSizeRight: "355px", onClick: function onClick() {
-                return _this2.click("41G", ['34H', '860B'], "365px", "355px");
+            { 'class': 'box 41G', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(1, archArray, "44%", "42%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/41G2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box 860B', style: { width: 12 }, focus: "860B", others: ['34H', '41G'], expandSizeLeft: "255px", expandSizeRight: "255px", onClick: function onClick() {
-                return _this2.click("860B", ['34H', '41G'], "255px", "255px");
+            { 'class': 'box 860B', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(2, archArray, "30.5%", "31%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/860B1.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box 860B', style: { width: 12 }, focus: "860B", others: ['34H', '41G'], expandSizeLeft: "255px", expandSizeRight: "255px", onClick: function onClick() {
-                return _this2.click("860B", ['34H', '41G'], "255px", "255px");
+            { 'class': 'box 860B', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(2, archArray, "30.5%", "31%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/860B2.jpg' })
           )
@@ -26663,7 +26664,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26685,7 +26686,7 @@ var Filmstage = function (_Component) {
   _createClass(Filmstage, [{
     key: 'click',
     value: function click(focus, others, expandSize) {
-      var myImg = document.getElementsByClassName(focus);
+      var myImg = document.getElementsByClassName(others[focus]);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.width;
         if (displaySetting == "2%") {
@@ -26697,7 +26698,9 @@ var Filmstage = function (_Component) {
       }
       var otherImg = [];
       for (var i = 0; i < others.length; i++) {
-        otherImg.push(document.getElementsByClassName(others[i]));
+        if (i != focus) {
+          otherImg.push(document.getElementsByClassName(others[i]));
+        }
       }
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
@@ -26712,6 +26715,8 @@ var Filmstage = function (_Component) {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      var stageArray = ['frida', 'cuckoo', 'child'];
 
       return _react2.default.createElement(
         'graphics',
@@ -26745,17 +26750,24 @@ var Filmstage = function (_Component) {
           { id: 'christina-list' },
           _react2.default.createElement(
             'div',
-            { 'class': 'box frida', style: { width: "2%" }, focus: "frida", others: ['cuckoo'], expandSize: "80%", onClick: function onClick() {
-                return _this2.click("frida", ['cuckoo'], "80%");
+            { 'class': 'box frida', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(0, stageArray, "80%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/frida2.jpg' })
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'box cuckoo', style: { width: "2%" }, focus: "cuckoo", others: ['frida'], expandSize: "95%", onClick: function onClick() {
-                return _this2.click("cuckoo", ['frida'], "95%");
+            { 'class': 'box cuckoo', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(1, stageArray, "92%");
               } },
             _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/cuckoo1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box child', style: { width: "2%" }, onClick: function onClick() {
+                return _this2.click(2, stageArray, "61%");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/obviouschild1.jpg' })
           )
         )
       );

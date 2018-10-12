@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default class Projects extends Component {
 
@@ -85,7 +85,8 @@ export default class Projects extends Component {
               A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.<br /><br />
               I attended Hack the Deep, the American Museum of Natural History's yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. <br /><br />
               <b style={{ fontSize: 12 }}>HTML Python Pandas CartoJS</b><br /><br />
-              <a href="https://hackthedeep.github.io/flotsam-and-jetsam"><button class="button">try me</button></a>
+              {/* <a href="https://hackthedeep.github.io/flotsam-and-jetsam"> */}
+              <button class="button-construction">try me</button>
             </p>
 
             <p class="project-text butterfly" style={{ opacity: 0, zIndex: -1}}>

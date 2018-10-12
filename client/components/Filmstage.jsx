@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Filmstage extends Component {
 
   click(focus, others, expandSize) { 
-    var myImg = document.getElementsByClassName(focus);
+    var myImg = document.getElementsByClassName(others[focus]);
     for (var i=0; i<myImg.length; i++) {
       var displaySetting = myImg[i].style.width;
       if(displaySetting == "2%") { myImg[i].style.width = expandSize; }
@@ -12,7 +12,7 @@ export default class Filmstage extends Component {
     }
     var otherImg = [];
     for (var i=0; i<others.length; i++) {
-      otherImg.push(document.getElementsByClassName(others[i]));
+      if(i != focus) { otherImg.push(document.getElementsByClassName(others[i])); }
     }
     for (var i=0; i<otherImg.length; i++) {
       for (var j=0; j<otherImg[i].length; j++) {
@@ -23,6 +23,8 @@ export default class Filmstage extends Component {
   }
 
   render () {
+    var stageArray = ['frida', 'cuckoo', 'child'];
+
     return (
       <graphics>
         <section id="design-list">
@@ -33,18 +35,21 @@ export default class Filmstage extends Component {
         </section>
 
         <section id="christina-list">
-          {/* <div class="box frida" style={{ width: "2%" }} focus={ "frida" } others={ ['cuckoo'] } expandSize={ "400px" } onClick={ () => this.click("frida", ['cuckoo'], "400px") } >
+          {/* <div class="box frida" style={{ width: "2%" }} onClick={ () => this.click(0, stageArray, "400px") } >
             <img class="christina-item" src="stages/frida1.jpg" />
           </div> */}
-          <div class="box frida" style={{ width: "2%" }} focus={ "frida" } others={ ['cuckoo'] } expandSize={ "80%" } onClick={ () => this.click("frida", ['cuckoo'], "80%") } >
+          <div class="box frida" style={{ width: "2%" }} onClick={ () => this.click(0, stageArray, "80%") } >
             <img class="christina-item" src="stages/frida2.jpg" />
           </div>
-          <div class="box cuckoo" style={{ width: "2%" }} focus={ "cuckoo" } others={ ['frida'] } expandSize={ "95%" } onClick={ () => this.click("cuckoo", ['frida'], "95%") } >
+          <div class="box cuckoo" style={{ width: "2%" }} onClick={ () => this.click(1, stageArray, "92%") } >
             <img class="christina-item" src="stages/cuckoo1.jpg" />
           </div>
-          {/* <div class="box cuckoo" style={{ width: "2%" }} focus={ "cuckoo" } others={ ['frida'] } expandSize={ "665px" } onClick={ () => this.click("cuckoo", ['frida'], "665px") } >
+          {/* <div class="box cuckoo" style={{ width: "2%" }} onClick={ () => this.click(1, stageArray, "665px") } >
             <img class="christina-item" src="stages/cuckoo2.jpg" />
           </div> */}
+          <div class="box child" style={{ width: "2%" }} onClick={ () => this.click(2, stageArray, "61%") } >
+            <img class="christina-item" src="stages/obviouschild1.jpg" />
+          </div>
         </section>
       </graphics>
     );

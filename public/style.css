@@ -67,18 +67,6 @@ about p {
   about .about-image {
     width: 6em;
   } 
-  about .about-image2 {
-    width: 6em;
-    transform: rotate(45deg);
-  } 
-  about .about-image3 {
-    width: 6em;
-    transform: rotate(90deg);
-  } 
-  about .about-image4 {
-    width: 6em;
-    transform: rotate(135deg);
-  } 
   about .link-image {
     width: 1.5em;
     padding-right: 1em;
@@ -126,6 +114,14 @@ about p {
       color: black;
       background-color: #d7dde2;
     }
+    #project-list .button-construction {
+      font-family: Axis-Typeface;
+      border: double;
+      border-width: thin;
+      color: gray;
+      background-color: #d7dde2;
+      text-decoration: line-through;
+    }
 
 resume img {
   width: 100%;
@@ -159,9 +155,3 @@ resume img {
   padding-bottom: 45%;
   transition: width 1s;
 }
-
-/* photography .link-image {
-    width: 1.5em;
-    display: block;
-    margin: 2em auto;
-  } */

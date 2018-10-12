@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Graphics extends Component {
 
   click(focus, others, expandSize) { 
-    var myImg = document.getElementsByClassName(focus);
+    var myImg = document.getElementsByClassName(others[focus]);
     for (var i=0; i<myImg.length; i++) {
       var displaySetting = myImg[i].style.width;
       if(displaySetting == "2%") { myImg[i].style.width = expandSize; }
@@ -12,7 +12,7 @@ export default class Graphics extends Component {
     }
     var otherImg = [];
     for (var i=0; i<others.length; i++) {
-      otherImg.push(document.getElementsByClassName(others[i]));
+      if(i != focus) { otherImg.push(document.getElementsByClassName(others[i])); }
     }
     for (var i=0; i<otherImg.length; i++) {
       for (var j=0; j<otherImg[i].length; j++) {
@@ -23,6 +23,8 @@ export default class Graphics extends Component {
   }
 
   render () {
+    var graphicsArray = ['whale', 'lib', 'evidence', 'ashes', 'fiji', 'tonga'];
+
     return (
       <graphics>
         <section id="design-list">
@@ -33,22 +35,22 @@ export default class Graphics extends Component {
         </section>
 
         <section id="christina-list">
-          <div class="box vertical whale" style={{ width: "2%" }} focus={ "whale" } others={ ['lib', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "45%") } >
+          <div class="box vertical whale" style={{ width: "2%" }} onClick={ () => this.click(0, graphicsArray, "29%") } >
             <img class="christina-item" src="graphics/junk_whale.jpg" />
           </div>
-          <div class="box vertical lib" style={{ width: "2%" }} focus={ "lib" } others={ ['whale', 'evidence', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "45%") } >
+          <div class="box vertical lib" style={{ width: "2%" }} onClick={ () => this.click(1, graphicsArray, "42.5%") } >
             <img class="christina-item" src="graphics/lib_elec.jpg" />
           </div>
-          <div class="box vertical evidence" style={{ width: "2%" }} focus={ "evidence" } others={ ['whale', 'lib', 'ashes', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "45%") }>
+          <div class="box vertical evidence" style={{ width: "2%" }} onClick={ () => this.click(2, graphicsArray, "29%") }>
             <img class="christina-item" src="graphics/evidence.jpg" />
           </div>
-          <div class="box horizontal ashes" style={{ width: "2%" }} focus={ "ashes" } others={ ['whale', 'lib', 'evidence', 'fiji', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "65%") }>
+          <div class="box horizontal ashes" style={{ width: "2%" }} onClick={ () => this.click(3, graphicsArray, "61%") }>
             <img class="christina-item" src="graphics/ashes.jpg" />
           </div>
-          <div class="box vertical fiji" style={{ width: "2%" }} focus={ "fiji" } others={ ['whale', 'lib', 'evidence', 'ashes', 'tonga'] } expandSize={ "45%" } onClick={ () => this.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "45%") }>
+          <div class="box vertical fiji" style={{ width: "2%" }} onClick={ () => this.click(4, graphicsArray, "30%") }>
             <img class="christina-item" src="graphics/fiji.jpg" />
           </div>
-          <div class="box vertical tonga" style={{ width: "2%" }} focus={ "tonga" } others={ ['whale', 'lib', 'evidence', 'ashes', 'fiji'] } expandSize={ "45%" } onClick={ () => this.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "45%") }>
+          <div class="box vertical tonga" style={{ width: "2%" }} onClick={ () => this.click(5, graphicsArray, "30%") }>
             <img class="christina-item" src="graphics/tonga.jpg" />
           </div>
         </section>

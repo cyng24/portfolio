@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class About extends Component {
 
@@ -7,10 +6,7 @@ export default class About extends Component {
     return (
       <about>
         <p>
-          <img className="about-image" src="images/marfa.png" />
-          <img className="about-image2" src="images/marfa.png" />
-          <img className="about-image3" src="images/marfa.png" />
-          <img className="about-image4" src="images/marfa.png" />
+          <img className="about-image" src="images/random.jpg" />
         </p>
         <p>I'm a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media.</p>
         <p>I've participated in a wide array of hackathons focused on subjects ranging from net neutrality to oceanography. I've created projects for mesh networks and VR headsets. With the growth and development of new products and platforms, I’ll never run out of things to learn.</p>
